@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; background:#efeae0; font-family:'Be Vietnam Pro',system-ui,sans-serif; }
+a { color:#0f6b4c; text-decoration:none; }
+a:hover { color:#0c563d; text-decoration:underline; }
+</style>
+</helmet>
+
+<section style="padding:56px 56px 20px;display:flex;flex-direction:column;gap:40px">
+  <div id="2a" style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.1em;color:#fff;background:#0f6b4c;padding:4px 10px;border-radius:999px">2A</span>
+      <span style="font-size:20px;font-weight:700;letter-spacing:-.02em;color:#1a1a1a">EZAFF — bố cục dashboard</span>
+      <span style="font-size:13px;color:#6b6353">Sidebar sáng, thẻ bo lớn, lưới 4 cột · giữ nguyên màu gốc</span>
+    </div>
+
+    <div style="position:relative;width:1440px;height:900px;background:#fff;border-radius:22px;overflow:hidden;display:flex;box-shadow:0 24px 60px rgba(46,38,22,.18);color:#1a1a1a">
+
+      <!-- sidebar -->
+      <sc-if value="{{ collapsed }}" hint-placeholder-val="{{ false }}">
+      <div style="width:76px;flex:0 0 76px;background:#fff;color:#1a1a1a;display:flex;flex-direction:column;align-items:center;padding:22px 12px 18px;gap:6px">
+        <div style="width:32px;height:32px;border-radius:9px;background:#0f6b4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:-.02em">ez</div>
+        <div onClick="{{ toggleSidebar }}" style="width:32px;height:32px;margin-top:14px;border-radius:9px;background:#f4f1ea;color:#5c5c5c;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer" style-hover="background:#e6ded0">»</div>
+        <div style="width:44px;height:36px;margin-top:10px;border-radius:11px;background:rgba(15,107,76,.12);color:#0f6b4c;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">1.2k</div>
+        <div style="width:44px;height:34px;border-radius:11px;color:#8a8272;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600">64</div>
+        <div style="width:44px;height:34px;border-radius:11px;color:#8a8272;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600">38</div>
+        <div style="width:22px;height:1px;background:#e6ded0;margin:8px 0"></div>
+        <div style="width:9px;height:9px;border-radius:999px;background:#0f6b4c;margin:7px 0"></div>
+        <div style="width:9px;height:9px;border-radius:999px;background:#6d28d9;margin:7px 0"></div>
+        <div style="width:9px;height:9px;border-radius:999px;background:#1d4ed8;margin:7px 0"></div>
+        <div style="width:9px;height:9px;border-radius:999px;background:#be123c;margin:7px 0"></div>
+        <div style="width:9px;height:9px;border-radius:999px;background:#0e7490;margin:7px 0"></div>
+        <div style="flex:1"></div>
+        <div style="font-size:11px;font-weight:700;color:#fff;background:#b47814;border-radius:999px;padding:3px 9px;font-variant-numeric:tabular-nums">15</div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ expanded }}" hint-placeholder-val="{{ true }}">
+      <div style="width:238px;flex:0 0 238px;background:#fff;color:#1a1a1a;display:flex;flex-direction:column;padding:22px 16px 18px">
+        <div style="display:flex;align-items:center;gap:10px;padding:0 6px 22px">
+          <div style="width:32px;height:32px;border-radius:9px;background:#0f6b4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:-.02em">ez</div>
+          <div style="flex:1;font-size:18px;font-weight:700;letter-spacing:-.02em">ezaff</div>
+          <div onClick="{{ toggleSidebar }}" style="width:30px;height:30px;border-radius:9px;background:#f4f1ea;color:#5c5c5c;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer" style-hover="background:#e6ded0">«</div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8a8272;padding:0 8px 8px">THƯ VIỆN</div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:11px;background:rgba(15,107,76,.12);border:1px solid rgba(15,107,76,.35);font-size:13.5px;font-weight:600;color:#0f6b4c">
+            <span style="flex:1">Tất cả link</span>
+            <span style="font-size:11.5px;font-variant-numeric:tabular-nums">1.248</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;font-size:13.5px;color:#3a3a3a">
+            <span style="flex:1">Hay dùng</span>
+            <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">64</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;font-size:13.5px;color:#3a3a3a">
+            <span style="flex:1">Mới thêm</span>
+            <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">38</span>
+          </div>
+        </div>
+
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8a8272;padding:18px 8px 8px">NHÓM</div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13.5px;color:#3a3a3a">
+            <span style="width:7px;height:7px;border-radius:999px;background:#0f6b4c"></span><span style="flex:1">Đồ gia dụng</span><span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">214</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13.5px;color:#3a3a3a">
+            <span style="width:7px;height:7px;border-radius:999px;background:#6d28d9"></span><span style="flex:1">Mỹ phẩm</span><span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">132</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13.5px;color:#3a3a3a">
+            <span style="width:7px;height:7px;border-radius:999px;background:#1d4ed8"></span><span style="flex:1">Công nghệ</span><span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">176</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13.5px;color:#3a3a3a">
+            <span style="width:7px;height:7px;border-radius:999px;background:#be123c"></span><span style="flex:1">Sale 11.11</span><span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">86</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13.5px;color:#3a3a3a">
+            <span style="width:7px;height:7px;border-radius:999px;background:#0e7490"></span><span style="flex:1">Thời trang</span><span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">289</span>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:9px;padding:14px 12px 8px;font-size:13.5px;font-weight:600;color:#1a1a1a">
+          <span style="flex:1">Cần xử lý</span>
+          <span style="font-size:11px;font-weight:700;color:#fff;background:#b47814;border-radius:999px;padding:2px 8px;font-variant-numeric:tabular-nums">15</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:9px;padding:8px 12px;font-size:13.5px;color:#3a3a3a">Nhập / xuất Excel</div>
+
+        <div style="flex:1"></div>
+        <div style="border:1px solid #ddd5c6;border-radius:13px;background:#faf8f3;padding:13px 14px">
+          <div style="font-size:12.5px;font-weight:700">Bản dùng thử</div>
+          <div style="font-size:11.5px;color:#6b6353;margin-top:3px;line-height:1.5">Còn 1 ngày · sau đó 5% lượt copy dùng link tác giả</div>
+          <div style="margin-top:10px;height:32px;border-radius:9px;background:#0f6b4c;color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center;justify-content:center">Xem chi tiết phí</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:13px 12px 0;font-size:13px;color:#6b6353">Cài đặt</div>
+      </div>
+      </sc-if>
+
+      <!-- main -->
+      <div style="flex:1;min-width:0;background:#efe9dd;border-radius:28px 0 0 28px;display:flex;flex-direction:column;padding:20px 22px 22px;gap:16px">
+
+        <div style="display:flex;align-items:center;gap:14px">
+          <div style="flex:1;height:52px;background:#fff;border-radius:999px;display:flex;align-items:center;gap:12px;padding:0 22px;box-shadow:0 2px 10px rgba(46,38,22,.06)">
+            <span style="font-size:14px;color:#a49a84">⌕</span>
+            <span style="font-size:14px;color:#a49a84">Tìm link theo tên, shop, ghi chú…</span>
+          </div>
+          <div style="width:46px;height:46px;border-radius:999px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;color:#5c5c5c;box-shadow:0 2px 10px rgba(46,38,22,.06)">◔</div>
+          <div style="position:relative;width:46px;height:46px;border-radius:999px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;color:#5c5c5c;box-shadow:0 2px 10px rgba(46,38,22,.06)">
+            ◌<span style="position:absolute;top:8px;right:10px;width:14px;height:14px;border-radius:999px;background:#be123c;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span>
+          </div>
+          <div style="width:46px;height:46px;border-radius:999px;background:#d8cdb8;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#5c4f38">DA</div>
+        </div>
+
+        <div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr;gap:16px">
+
+          <!-- left column -->
+          <div style="min-width:0;display:flex;flex-direction:column;gap:14px">
+
+            <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px">
+              <div>
+                <div style="font-size:26px;font-weight:700;letter-spacing:-.02em">Thư viện của bạn</div>
+                <div style="font-size:13.5px;color:#7a715f;margin-top:3px">Chào Dinda, hôm nay có 12 link cần bổ sung thông tin.</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <span style="display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border-radius:999px;background:#fff;font-size:13px;font-weight:600;color:#5c5c5c;white-space:nowrap">Sắp xếp: Hay dùng <span style="font-size:9px;color:#a49a84">▾</span></span>
+                <div onClick="{{ onAddClick }}" style="height:42px;padding:0 20px;border-radius:999px;background:#0f6b4c;color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;gap:9px;white-space:nowrap;cursor:pointer;box-shadow:0 8px 20px rgba(15,107,76,.3)" style-hover="background:#0c563d">＋ Thêm link</div>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+              <span style="display:inline-flex;align-items:center;height:34px;padding:0 15px;border-radius:999px;background:#0f6b4c;color:#fff;font-size:12.5px;font-weight:600">Tất cả sàn</span>
+              <span style="display:inline-flex;align-items:center;height:34px;padding:0 15px;border-radius:999px;background:#fff;font-size:12.5px;font-weight:600;color:#5c5c5c">Shopee <span style="color:#a49a84;margin-left:6px;font-variant-numeric:tabular-nums">642</span></span>
+              <span style="display:inline-flex;align-items:center;height:34px;padding:0 15px;border-radius:999px;background:#fff;font-size:12.5px;font-weight:600;color:#5c5c5c">TikTok Shop <span style="color:#a49a84;margin-left:6px;font-variant-numeric:tabular-nums">318</span></span>
+              <span style="display:inline-flex;align-items:center;height:34px;padding:0 15px;border-radius:999px;background:#fff;font-size:12.5px;font-weight:600;color:#5c5c5c">Lazada <span style="color:#a49a84;margin-left:6px;font-variant-numeric:tabular-nums">176</span></span>
+              <span style="display:inline-flex;align-items:center;height:34px;padding:0 15px;border-radius:999px;background:#fff;font-size:12.5px;font-weight:600;color:#5c5c5c">Tiki <span style="color:#a49a84;margin-left:6px;font-variant-numeric:tabular-nums">112</span></span>
+              <div style="flex:1"></div>
+              <span style="display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 15px;border-radius:999px;background:#fff;font-size:12.5px;font-weight:600;color:#5c5c5c">Bộ lọc <span style="font-size:10.5px;color:#fff;background:#0f6b4c;border-radius:999px;padding:1px 6px">2</span></span>
+            </div>
+
+            <div style="flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:272px;gap:14px;overflow:auto;padding-bottom:2px">
+
+              <sc-for list="{{ addedItems }}" as="it" hint-placeholder-count="0">
+                <div style="background:#fff;border-radius:18px;box-shadow:0 6px 18px rgba(15,107,76,.16);outline:2px solid rgba(15,107,76,.4);display:flex;flex-direction:column;overflow:hidden">
+                  <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                    <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                    <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">{{ it.platform }}</span>
+                    <span style="position:absolute;top:8px;right:8px;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px;background:{{ it.statusBg }}">{{ it.status }}</span>
+                  </div>
+                  <div style="padding:10px 14px 0;flex:1;min-height:0">
+                    <div style="font-size:13px;font-weight:600;line-height:1.35;overflow:hidden">{{ it.title }}</div>
+                    <div style="margin-top:6px;font-size:15px;font-weight:700;color:#0f6b4c">{{ it.price }}</div>
+                    <div style="margin-top:2px;font-size:11.5px;color:#7a715f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ it.url }}</div>
+                    <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                      <span style="font-size:10.5px;font-weight:600;color:#8a8272;background:#efe9dd;padding:3px 9px;border-radius:999px">Chưa gán nhóm</span>
+                      <span style="font-size:11px;color:#a49a84">vừa thêm</span>
+                    </div>
+                  </div>
+                  <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                    <div style="display:flex;gap:5px">
+                      <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                      <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                    </div>
+                    <div style="display:flex;gap:5px">
+                      <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                      <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Gán nhóm</div>
+                      <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+
+              <div style="background:#fff;border-radius:18px;box-shadow:0 2px 10px rgba(46,38,22,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                  <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                  <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Shopee</span>
+                  <span style="position:absolute;top:8px;right:8px;background:#0f6b4c;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Xong</span>
+                </div>
+                <div style="padding:10px 14px 0;flex:1;min-height:0">
+                  <div style="font-size:13px;font-weight:600;line-height:1.35">Nồi chiên không dầu Lock&amp;Lock 5.5L điện tử</div>
+                  <div style="margin-top:6px;font-size:15px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">1.290.000 ₫</div>
+                  <div style="margin-top:2px;font-size:11.5px;color:#7a715f">4,9 · 12,3k đã bán</div>
+                  <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                    <span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:#dfece6;padding:3px 9px;border-radius:999px">Đồ gia dụng</span>
+                    <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">42 copy</span>
+                  </div>
+                </div>
+                <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                    <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                  </div>
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                    <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border-radius:18px;box-shadow:0 2px 10px rgba(46,38,22,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                  <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                  <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Shopee</span>
+                  <span style="position:absolute;top:8px;right:8px;background:#0f6b4c;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Xong</span>
+                </div>
+                <div style="padding:10px 14px 0;flex:1;min-height:0">
+                  <div style="font-size:13px;font-weight:600;line-height:1.35">Serum Vitamin C Melano CC dưỡng sáng 20ml</div>
+                  <div style="margin-top:6px;font-size:15px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">195.000 ₫</div>
+                  <div style="margin-top:2px;font-size:11.5px;color:#7a715f">4,9 · 48,7k đã bán</div>
+                  <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                    <span style="font-size:10.5px;font-weight:600;color:#be123c;background:#f6e3e6;padding:3px 9px;border-radius:999px">Mỹ phẩm</span>
+                    <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">118 copy</span>
+                  </div>
+                </div>
+                <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                    <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                  </div>
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                    <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border-radius:18px;box-shadow:0 2px 10px rgba(46,38,22,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                  <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                  <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">TikTok</span>
+                  <span style="position:absolute;top:8px;right:8px;background:#0f6b4c;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Xong</span>
+                </div>
+                <div style="padding:10px 14px 0;flex:1;min-height:0">
+                  <div style="font-size:13px;font-weight:600;line-height:1.35">Tai nghe Bluetooth Soundcore P20i chống ồn</div>
+                  <div style="margin-top:6px;font-size:15px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">590.000 ₫</div>
+                  <div style="margin-top:2px;font-size:11.5px;color:#7a715f">4,7 · 2,8k đã bán</div>
+                  <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                    <span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:#dee7f2;padding:3px 9px;border-radius:999px">Công nghệ</span>
+                    <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">27 copy</span>
+                  </div>
+                </div>
+                <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                    <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                  </div>
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                    <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border-radius:18px;box-shadow:0 2px 10px rgba(46,38,22,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="position:relative;height:104px;background:#f4e7d5;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                  <span style="font-size:11.5px;color:#bfa07a">Không ảnh</span>
+                  <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Lazada</span>
+                  <span style="position:absolute;top:8px;right:8px;background:#b47814;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Thiếu ảnh</span>
+                </div>
+                <div style="padding:10px 14px 0;flex:1;min-height:0">
+                  <div style="font-size:13px;font-weight:600;line-height:1.35">Bỉm quần Merries size L 44 miếng</div>
+                  <div style="margin-top:6px;font-size:15px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">415.000 ₫</div>
+                  <div style="margin-top:2px;font-size:11.5px;color:#b47814">Cần bổ sung ảnh &amp; shop</div>
+                  <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                    <span style="font-size:10.5px;font-weight:600;color:#b45309;background:#f4e7d5;padding:3px 9px;border-radius:999px">Mẹ &amp; bé</span>
+                    <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">4 copy</span>
+                  </div>
+                </div>
+                <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                    <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                  </div>
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Dán ảnh</div>
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                    <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border-radius:18px;box-shadow:0 2px 10px rgba(46,38,22,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                  <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                  <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Shopee</span>
+                  <span style="position:absolute;top:8px;right:8px;background:#b47814;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Đang quét…</span>
+                </div>
+                <div style="padding:10px 14px 0;flex:1;min-height:0">
+                  <div style="font-size:13px;font-weight:600;line-height:1.35">Máy hút bụi cầm tay Xiaomi Mi Vacuum Mini</div>
+                  <div style="margin-top:6px;font-size:15px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">899.000 ₫</div>
+                  <div style="margin-top:2px;font-size:11.5px;color:#7a715f">4,8 · 5,1k đã bán</div>
+                  <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                    <span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:#dee7f2;padding:3px 9px;border-radius:999px">Công nghệ</span>
+                    <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">31 copy</span>
+                  </div>
+                </div>
+                <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                    <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                  </div>
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#c2b8a3">Sửa</div>
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#c2b8a3">Quét lại</div>
+                    <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#d9a3a3">Xoá</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border-radius:18px;box-shadow:0 2px 10px rgba(46,38,22,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="position:relative;height:104px;background:#f8eeee;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                  <span style="font-size:11.5px;color:#c69a9a">Không ảnh</span>
+                  <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Tiki</span>
+                  <span style="position:absolute;top:8px;right:8px;background:#a33;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Lỗi — nhập tay</span>
+                </div>
+                <div style="padding:10px 14px 0;flex:1;min-height:0">
+                  <div style="font-size:13px;font-weight:600;line-height:1.35">Bộ nồi inox 3 đáy Sunhouse 3 món</div>
+                  <div style="margin-top:6px;font-size:15px;font-weight:700;color:#a33">Chưa có giá</div>
+                  <div style="margin-top:2px;font-size:11.5px;color:#a33">Không quét được trang sản phẩm</div>
+                  <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                    <span style="font-size:10.5px;font-weight:600;color:#8a8272;background:#efe9dd;padding:3px 9px;border-radius:999px">Chưa gán nhóm</span>
+                  </div>
+                </div>
+                <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép link</div>
+                    <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                  </div>
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Mở trang</div>
+                    <div style="flex:1;height:28px;background:#dfece6;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#0f6b4c;font-weight:600">Nhập tay</div>
+                    <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border-radius:18px;box-shadow:0 2px 10px rgba(46,38,22,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                  <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                  <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Shopee</span>
+                  <span style="position:absolute;top:8px;right:8px;background:#0f6b4c;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Xong</span>
+                </div>
+                <div style="padding:10px 14px 0;flex:1;min-height:0">
+                  <div style="font-size:13px;font-weight:600;line-height:1.35">Kem chống nắng Anessa Perfect UV 60ml</div>
+                  <div style="margin-top:6px;font-size:15px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">520.000 ₫</div>
+                  <div style="margin-top:2px;font-size:11.5px;color:#7a715f">4,9 · 33,2k đã bán</div>
+                  <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                    <span style="font-size:10.5px;font-weight:600;color:#be123c;background:#f6e3e6;padding:3px 9px;border-radius:999px">Mỹ phẩm</span>
+                    <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">89 copy</span>
+                  </div>
+                </div>
+                <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                    <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                  </div>
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                    <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border-radius:18px;box-shadow:0 2px 10px rgba(46,38,22,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center;margin:8px 8px 0;border-radius:13px">
+                  <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                  <span style="position:absolute;top:8px;left:8px;background:#fff;color:#3a3a3a;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Shopee</span>
+                  <span style="position:absolute;top:8px;right:8px;background:#0f6b4c;color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px">Xong</span>
+                </div>
+                <div style="padding:10px 14px 0;flex:1;min-height:0">
+                  <div style="font-size:13px;font-weight:600;line-height:1.35">Áo khoác gió unisex form rộng chống nước</div>
+                  <div style="margin-top:6px;font-size:15px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">249.000 ₫</div>
+                  <div style="margin-top:2px;font-size:11.5px;color:#7a715f">4,6 · 9,4k đã bán</div>
+                  <div style="margin-top:8px;display:flex;align-items:center;gap:7px">
+                    <span style="font-size:10.5px;font-weight:600;color:#0e7490;background:#dbeaee;padding:3px 9px;border-radius:999px">Thời trang</span>
+                    <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">63 copy</span>
+                  </div>
+                </div>
+                <div style="padding:10px 14px 14px;display:flex;flex-direction:column;gap:7px">
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:34px;background:#0f6b4c;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                    <div style="width:32px;height:34px;background:#dfece6;color:#0f6b4c;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                  </div>
+                  <div style="display:flex;gap:5px">
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                    <div style="flex:1;height:28px;background:#f4f1ea;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                    <div style="flex:1;height:28px;background:#f8eeee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;left:50%;bottom:28px;transform:translateX(-50%);background:#15130f;color:#f5f2ea;border-radius:999px;padding:12px 22px;font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:12px;box-shadow:0 12px 32px rgba(0,0,0,.28)">
+          <span>{{ toast }}</span>
+          <span style="font-size:12.5px;font-weight:600;color:#8fd3b6">Hoàn tác</span>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ modal }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;background:rgba(26,22,16,.4);display:flex;align-items:center;justify-content:center">
+          <div style="width:600px;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.3)">
+            <div style="padding:18px 22px;display:flex;align-items:center;justify-content:space-between">
+              <div>
+                <div style="font-size:17px;font-weight:700;letter-spacing:-.02em">Thêm link affiliate</div>
+                <div style="font-size:12.5px;color:#7a715f;margin-top:3px">Clipboard chưa có link hợp lệ — dán link vào đây</div>
+              </div>
+              <div onClick="{{ closeModal }}" style="width:32px;height:32px;border-radius:999px;background:#f4f1ea;color:#5c5c5c;display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer" style-hover="background:#e6ded0">✕</div>
+            </div>
+            <div style="padding:0 22px 20px;display:flex;flex-direction:column;gap:12px">
+              <textarea value="{{ draft }}" onChange="{{ onDraft }}" placeholder="https://s.shopee.vn/… — mỗi link một dòng" style="width:100%;height:150px;box-sizing:border-box;border:1px solid #ddd5c6;border-radius:14px;background:#faf8f3;padding:13px 15px;font-size:13px;line-height:1.8;font-family:ui-monospace,Consolas,monospace;color:#3a3a3a;resize:none;outline:none"></textarea>
+              <div style="display:flex;align-items:center;gap:12px">
+                <span style="flex:1;font-size:12.5px;color:#0f6b4c;font-weight:600">{{ draftCount }}</span>
+                <div onClick="{{ closeModal }}" style="height:38px;padding:0 18px;border-radius:999px;background:#f4f1ea;font-size:13px;font-weight:600;color:#5c5c5c;display:flex;align-items:center;cursor:pointer" style-hover="background:#e6ded0">Huỷ</div>
+                <div onClick="{{ submitDraft }}" style="height:38px;padding:0 20px;border-radius:999px;background:#0f6b4c;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;cursor:pointer" style-hover="background:#0c563d">Thêm &amp; quét</div>
+              </div>
+              <div style="font-size:12px;color:#8a8272;line-height:1.5">Hỗ trợ Shopee, Lazada, TikTok Shop, Tiki. Link trùng sẽ tự bỏ qua; link quét lỗi vẫn được lưu để nhập tay.</div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+  <div id="1a" style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.1em;color:#fff;background:#0f6b4c;padding:4px 10px;border-radius:999px">1A</span>
+      <span style="font-size:20px;font-weight:700;letter-spacing:-.02em;color:#1a1a1a">EZAFF — Thư viện link affiliate</span>
+      <span style="font-size:13px;color:#6b6353">Desktop · 1440 × 900 · tiếng Việt</span>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+      <!-- ============ FRAME A: LIBRARY GRID ============ -->
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12.5px;font-weight:600;letter-spacing:.02em;color:#6b6353">A · Thư viện — chế độ lưới</div>
+        <div style="width:1440px;height:900px;background:#f4f1ea;border:1px solid #ddd5c6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 44px rgba(46,38,22,.12);color:#1a1a1a">
+
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px;flex:0 0 56px;padding:0 18px;background:#fff;border-bottom:1px solid #ddd5c6">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:26px;height:26px;border-radius:7px;background:#0f6b4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:-.02em">ez</div>
+              <div style="font-size:17px;font-weight:700;letter-spacing:-.02em">ezaff</div>
+              <div style="width:1px;height:18px;background:#ddd5c6"></div>
+              <div style="font-size:12.5px;color:#6b6353">Thư viện link affiliate</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="font-size:12.5px;color:#6b6353;font-variant-numeric:tabular-nums;margin-right:6px">1.248 sản phẩm · 4.312 lượt copy</div>
+              <div style="height:32px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Nhập Excel</div>
+              <div style="height:32px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Xuất Excel</div>
+              <div style="height:32px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Cài đặt</div>
+            </div>
+          </div>
+
+          <div style="flex:1;min-height:0;display:flex">
+
+            <!-- sidebar -->
+            <div style="width:236px;flex:0 0 236px;background:#fff;border-right:1px solid #ddd5c6;display:flex;flex-direction:column;padding:14px 10px 10px">
+              <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8a8272;padding:0 6px 8px">NHÓM</div>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;background:rgba(15,107,76,.12);font-size:13px;font-weight:600">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#5c5c5c"></span>
+                  <span style="flex:1">Tất cả</span>
+                  <span style="font-size:11.5px;color:#6b6353;font-variant-numeric:tabular-nums">1.248</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#be123c"></span>
+                  <span style="flex:1">Sale 11.11</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">86</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#0f6b4c"></span>
+                  <span style="flex:1">Đồ gia dụng</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">214</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#6d28d9"></span>
+                  <span style="flex:1">Mỹ phẩm</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">132</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#b45309"></span>
+                  <span style="flex:1">Mẹ &amp; bé</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">97</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#1d4ed8"></span>
+                  <span style="flex:1">Công nghệ</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">176</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#0e7490"></span>
+                  <span style="flex:1">Thời trang</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">289</span>
+                </div>
+              </div>
+
+              <div style="height:1px;background:#ddd5c6;margin:12px 6px"></div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8a8272;padding:0 6px 8px">CẦN XỬ LÝ</div>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#92620c"></span>
+                  <span style="flex:1">Thiếu thông tin</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">12</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#a33"></span>
+                  <span style="flex:1">Lỗi quét</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">3</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#c2b8a3"></span>
+                  <span style="flex:1">Chưa gán nhóm</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">41</span>
+                </div>
+              </div>
+
+              <div style="flex:1"></div>
+              <div style="display:flex;gap:6px;padding-top:10px;border-top:1px solid #ddd5c6">
+                <div style="flex:1;height:32px;border:1px solid #ddd5c6;border-radius:8px;background:#faf8f3;display:flex;align-items:center;padding:0 10px;font-size:12.5px;color:#a49a84">Tên nhóm mới…</div>
+                <div style="height:32px;padding:0 12px;border:1px solid #0f6b4c;border-radius:8px;background:#0f6b4c;color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Tạo</div>
+              </div>
+            </div>
+
+            <!-- main -->
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px;padding:14px 18px 16px">
+
+              <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);padding:10px 12px;display:flex;align-items:center;gap:10px">
+                <div style="font-size:12.5px;font-weight:700;white-space:nowrap">Thêm link</div>
+                <div style="flex:1;height:36px;border:1px solid #ddd5c6;border-radius:8px;background:#faf8f3;display:flex;align-items:center;padding:0 12px;font-size:13px;color:#a49a84">Dán 1 hoặc nhiều link Shopee / Lazada / TikTok Shop — mỗi link một dòng</div>
+                <div style="font-size:11.5px;color:#a49a84;white-space:nowrap">Ctrl + Enter</div>
+                <div style="height:36px;padding:0 16px;border:1px solid #0f6b4c;border-radius:8px;background:#0f6b4c;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center">Thêm &amp; quét</div>
+              </div>
+
+              <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);padding:10px 12px;display:flex;flex-direction:column;gap:9px">
+                <div style="display:flex;gap:10px;align-items:flex-end">
+                  <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px">
+                    <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">TÌM KIẾM</div>
+                    <div style="height:34px;border:1px solid #0f6b4c;border-radius:8px;background:#fff;display:flex;align-items:center;padding:0 10px;font-size:13px;box-shadow:0 0 0 3px rgba(15,107,76,.12)">nồi chiên</div>
+                  </div>
+                  <div style="width:150px;display:flex;flex-direction:column;gap:4px">
+                    <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">SÀN</div>
+                    <div style="height:34px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-size:13px">Shopee<span style="font-size:9px;color:#8a8272">▾</span></div>
+                  </div>
+                  <div style="width:170px;display:flex;flex-direction:column;gap:4px">
+                    <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">KHOẢNG GIÁ</div>
+                    <div style="height:34px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;display:flex;align-items:center;padding:0 10px;font-size:13px;font-variant-numeric:tabular-nums">0 – 1.500.000 ₫</div>
+                  </div>
+                  <div style="width:150px;display:flex;flex-direction:column;gap:4px">
+                    <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">NGÀY THÊM</div>
+                    <div style="height:34px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-size:13px">30 ngày qua<span style="font-size:9px;color:#8a8272">▾</span></div>
+                  </div>
+                  <div style="width:160px;display:flex;flex-direction:column;gap:4px">
+                    <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">SẮP XẾP</div>
+                    <div style="height:34px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-size:13px">Hay dùng nhất<span style="font-size:9px;color:#8a8272">▾</span></div>
+                  </div>
+                  <div style="display:flex;height:34px;border:1px solid #ddd5c6;border-radius:8px;overflow:hidden">
+                    <div style="padding:0 12px;display:flex;align-items:center;font-size:12.5px;font-weight:600;background:#0f6b4c;color:#fff">Lưới</div>
+                    <div style="padding:0 12px;display:flex;align-items:center;font-size:12.5px;font-weight:600;background:#fff;color:#5c5c5c;border-left:1px solid #ddd5c6">Danh sách</div>
+                  </div>
+                </div>
+
+                <sc-if value="{{ showFilterChips }}" hint-placeholder-val="{{ true }}">
+                  <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
+                    <span style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums;margin-right:2px">Hiển thị 128 / 1.248</span>
+                    <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:4px 9px;border-radius:999px">Từ khoá: nồi chiên <span style="opacity:.55">✕</span></span>
+                    <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:4px 9px;border-radius:999px">Shopee <span style="opacity:.55">✕</span></span>
+                    <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:4px 9px;border-radius:999px">≤ 1.500.000 ₫ <span style="opacity:.55">✕</span></span>
+                    <span style="font-size:11.5px;font-weight:600;color:#8a8272;text-decoration:underline">Xoá tất cả bộ lọc</span>
+                  </div>
+                </sc-if>
+              </div>
+
+              <div style="flex:1;min-height:0;border:1px solid #ddd5c6;border-radius:12px;background:rgba(255,255,255,.55);padding:12px;overflow:hidden">
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+
+                  <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                    <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center">
+                      <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                      <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.62);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Shopee</span>
+                      <span style="position:absolute;top:8px;right:8px;background:rgba(15,107,76,.9);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Xong</span>
+                    </div>
+                    <div style="padding:8px 12px 0">
+                      <div style="font-size:13px;font-weight:600;line-height:1.35;height:32px;overflow:hidden">Nồi chiên không dầu Lock&amp;Lock 5.5L điện tử</div>
+                      <div style="margin-top:6px;font-size:14.5px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">1.290.000 ₫</div>
+                      <div style="margin-top:3px;font-size:11.5px;color:#6b6353">4,9 · 12,3k đã bán</div>
+                      <div style="margin-top:2px;font-size:11.5px;color:#a49a84;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lock&amp;Lock Official Store</div>
+                      <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+                        <span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 7px;border-radius:999px">Đồ gia dụng</span>
+                        <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">42 copy</span>
+                      </div>
+                    </div>
+                    <div style="padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex">
+                        <div style="flex:1;height:32px;background:#0f6b4c;color:#fff;border-radius:8px 0 0 8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                        <div style="width:30px;height:32px;background:#0f6b4c;color:#fff;border-left:1px solid rgba(255,255,255,.3);border-radius:0 8px 8px 0;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                      </div>
+                      <div style="display:flex;gap:6px">
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                        <div style="flex:1;height:28px;border:1px solid #e6c9c9;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                    <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center">
+                      <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                      <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.62);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Shopee</span>
+                      <span style="position:absolute;top:8px;right:8px;background:rgba(15,107,76,.9);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Xong</span>
+                    </div>
+                    <div style="padding:8px 12px 0">
+                      <div style="font-size:13px;font-weight:600;line-height:1.35;height:32px;overflow:hidden">Serum Vitamin C Melano CC dưỡng sáng 20ml</div>
+                      <div style="margin-top:6px;font-size:14.5px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">195.000 ₫</div>
+                      <div style="margin-top:3px;font-size:11.5px;color:#6b6353">4,9 · 48,7k đã bán</div>
+                      <div style="margin-top:2px;font-size:11.5px;color:#a49a84;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Hada Labo Việt Nam</div>
+                      <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+                        <span style="font-size:10.5px;font-weight:600;color:#6d28d9;background:rgba(109,40,217,.12);padding:2px 7px;border-radius:999px">Mỹ phẩm</span>
+                        <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">118 copy</span>
+                      </div>
+                    </div>
+                    <div style="padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex">
+                        <div style="flex:1;height:32px;background:#0f6b4c;color:#fff;border-radius:8px 0 0 8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                        <div style="width:30px;height:32px;background:#0f6b4c;color:#fff;border-left:1px solid rgba(255,255,255,.3);border-radius:0 8px 8px 0;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                      </div>
+                      <div style="display:flex;gap:6px">
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                        <div style="flex:1;height:28px;border:1px solid #e6c9c9;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                    <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center">
+                      <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                      <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.62);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">TikTok</span>
+                      <span style="position:absolute;top:8px;right:8px;background:rgba(15,107,76,.9);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Xong</span>
+                    </div>
+                    <div style="padding:8px 12px 0">
+                      <div style="font-size:13px;font-weight:600;line-height:1.35;height:32px;overflow:hidden">Tai nghe Bluetooth Soundcore P20i chống ồn</div>
+                      <div style="margin-top:6px;font-size:14.5px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">590.000 ₫</div>
+                      <div style="margin-top:3px;font-size:11.5px;color:#6b6353">4,7 · 2,8k đã bán</div>
+                      <div style="margin-top:2px;font-size:11.5px;color:#a49a84;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Anker Việt Nam</div>
+                      <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+                        <span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span>
+                        <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">27 copy</span>
+                      </div>
+                    </div>
+                    <div style="padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex">
+                        <div style="flex:1;height:32px;background:#0f6b4c;color:#fff;border-radius:8px 0 0 8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                        <div style="width:30px;height:32px;background:#0f6b4c;color:#fff;border-left:1px solid rgba(255,255,255,.3);border-radius:0 8px 8px 0;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                      </div>
+                      <div style="display:flex;gap:6px">
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                        <div style="flex:1;height:28px;border:1px solid #e6c9c9;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:#fff;border:1px solid #e0c9a6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                    <div style="position:relative;height:104px;background:#f3ece0;display:flex;align-items:center;justify-content:center">
+                      <span style="font-size:11.5px;color:#b3a992">Không ảnh</span>
+                      <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.62);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Lazada</span>
+                      <span style="position:absolute;top:8px;right:8px;background:rgba(146,98,12,.92);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Thiếu ảnh</span>
+                    </div>
+                    <div style="padding:8px 12px 0">
+                      <div style="font-size:13px;font-weight:600;line-height:1.35;height:32px;overflow:hidden">Bỉm quần Merries size L 44 miếng</div>
+                      <div style="margin-top:6px;font-size:14.5px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">415.000 ₫</div>
+                      <div style="margin-top:3px;font-size:11.5px;color:#92620c">Cần bổ sung ảnh &amp; shop</div>
+                      <div style="margin-top:2px;font-size:11.5px;color:#a49a84">—</div>
+                      <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+                        <span style="font-size:10.5px;font-weight:600;color:#b45309;background:rgba(180,83,9,.12);padding:2px 7px;border-radius:999px">Mẹ &amp; bé</span>
+                        <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">4 copy</span>
+                      </div>
+                    </div>
+                    <div style="padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex">
+                        <div style="flex:1;height:32px;background:#0f6b4c;color:#fff;border-radius:8px 0 0 8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                        <div style="width:30px;height:32px;background:#0f6b4c;color:#fff;border-left:1px solid rgba(255,255,255,.3);border-radius:0 8px 8px 0;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                      </div>
+                      <div style="display:flex;gap:6px">
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Dán ảnh</div>
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                        <div style="flex:1;height:28px;border:1px solid #e6c9c9;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                    <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center">
+                      <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                      <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.62);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Shopee</span>
+                      <span style="position:absolute;top:8px;right:8px;background:rgba(15,107,76,.9);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Xong</span>
+                    </div>
+                    <div style="padding:8px 12px 0">
+                      <div style="font-size:13px;font-weight:600;line-height:1.35;height:32px;overflow:hidden">Kem chống nắng Anessa Perfect UV 60ml</div>
+                      <div style="margin-top:6px;font-size:14.5px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">520.000 ₫</div>
+                      <div style="margin-top:3px;font-size:11.5px;color:#6b6353">4,9 · 33,2k đã bán</div>
+                      <div style="margin-top:2px;font-size:11.5px;color:#a49a84;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Shiseido Việt Nam</div>
+                      <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+                        <span style="font-size:10.5px;font-weight:600;color:#6d28d9;background:rgba(109,40,217,.12);padding:2px 7px;border-radius:999px">Mỹ phẩm</span>
+                        <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">89 copy</span>
+                      </div>
+                    </div>
+                    <div style="padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex">
+                        <div style="flex:1;height:32px;background:#0f6b4c;color:#fff;border-radius:8px 0 0 8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                        <div style="width:30px;height:32px;background:#0f6b4c;color:#fff;border-left:1px solid rgba(255,255,255,.3);border-radius:0 8px 8px 0;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                      </div>
+                      <div style="display:flex;gap:6px">
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                        <div style="flex:1;height:28px;border:1px solid #e6c9c9;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                    <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center">
+                      <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                      <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.62);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Shopee</span>
+                      <span style="position:absolute;top:8px;right:8px;background:rgba(180,120,20,.92);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Đang quét…</span>
+                    </div>
+                    <div style="padding:8px 12px 0">
+                      <div style="font-size:13px;font-weight:600;line-height:1.35;height:32px;overflow:hidden">Máy hút bụi cầm tay Xiaomi Mi Vacuum Mini</div>
+                      <div style="margin-top:6px;font-size:14.5px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">899.000 ₫</div>
+                      <div style="margin-top:3px;font-size:11.5px;color:#6b6353">4,8 · 5,1k đã bán</div>
+                      <div style="margin-top:2px;font-size:11.5px;color:#a49a84;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Xiaomi Official Store</div>
+                      <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+                        <span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span>
+                        <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">31 copy</span>
+                      </div>
+                    </div>
+                    <div style="padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex">
+                        <div style="flex:1;height:32px;background:#0f6b4c;color:#fff;border-radius:8px 0 0 8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                        <div style="width:30px;height:32px;background:#0f6b4c;color:#fff;border-left:1px solid rgba(255,255,255,.3);border-radius:0 8px 8px 0;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                      </div>
+                      <div style="display:flex;gap:6px">
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#c2b8a3">Sửa</div>
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#c2b8a3">Quét lại</div>
+                        <div style="flex:1;height:28px;border:1px solid #e6c9c9;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#d9a3a3">Xoá</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                    <div style="position:relative;height:104px;background:#ece7db;display:flex;align-items:center;justify-content:center">
+                      <span style="font-size:10.5px;letter-spacing:.08em;color:#b3a992">ẢNH SẢN PHẨM</span>
+                      <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.62);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Shopee</span>
+                      <span style="position:absolute;top:8px;right:8px;background:rgba(15,107,76,.9);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Xong</span>
+                    </div>
+                    <div style="padding:8px 12px 0">
+                      <div style="font-size:13px;font-weight:600;line-height:1.35;height:32px;overflow:hidden">Áo khoác gió unisex form rộng chống nước</div>
+                      <div style="margin-top:6px;font-size:14.5px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">249.000 ₫</div>
+                      <div style="margin-top:3px;font-size:11.5px;color:#6b6353">4,6 · 9,4k đã bán</div>
+                      <div style="margin-top:2px;font-size:11.5px;color:#a49a84;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">MENDY Store</div>
+                      <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+                        <span style="font-size:10.5px;font-weight:600;color:#0e7490;background:rgba(14,116,144,.12);padding:2px 7px;border-radius:999px">Thời trang</span>
+                        <span style="font-size:11px;color:#a49a84;font-variant-numeric:tabular-nums">63 copy</span>
+                      </div>
+                    </div>
+                    <div style="padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex">
+                        <div style="flex:1;height:32px;background:#0f6b4c;color:#fff;border-radius:8px 0 0 8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép</div>
+                        <div style="width:30px;height:32px;background:#0f6b4c;color:#fff;border-left:1px solid rgba(255,255,255,.3);border-radius:0 8px 8px 0;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                      </div>
+                      <div style="display:flex;gap:6px">
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Sửa</div>
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Quét lại</div>
+                        <div style="flex:1;height:28px;border:1px solid #e6c9c9;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:#fff;border:1px solid #e6c9c9;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                    <div style="position:relative;height:104px;background:#f6ecec;display:flex;align-items:center;justify-content:center">
+                      <span style="font-size:11.5px;color:#c69a9a">Không ảnh</span>
+                      <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.62);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Tiki</span>
+                      <span style="position:absolute;top:8px;right:8px;background:rgba(163,51,51,.9);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px">Lỗi — nhập tay</span>
+                    </div>
+                    <div style="padding:8px 12px 0">
+                      <div style="font-size:13px;font-weight:600;line-height:1.35;height:32px;overflow:hidden">Bộ nồi inox 3 đáy Sunhouse 3 món</div>
+                      <div style="margin-top:6px;font-size:14.5px;font-weight:700;color:#a33;font-variant-numeric:tabular-nums">Chưa có giá</div>
+                      <div style="margin-top:3px;font-size:11.5px;color:#a33">Không quét được trang sản phẩm</div>
+                      <div style="margin-top:2px;font-size:11.5px;color:#a49a84">—</div>
+                      <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+                        <span style="font-size:10.5px;font-weight:600;color:#8a8272;background:rgba(196,186,163,.28);padding:2px 7px;border-radius:999px">Chưa gán nhóm</span>
+                      </div>
+                    </div>
+                    <div style="padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px">
+                      <div style="display:flex">
+                        <div style="flex:1;height:32px;background:#0f6b4c;color:#fff;border-radius:8px 0 0 8px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600">Sao chép link</div>
+                        <div style="width:30px;height:32px;background:#0f6b4c;color:#fff;border-left:1px solid rgba(255,255,255,.3);border-radius:0 8px 8px 0;display:flex;align-items:center;justify-content:center;font-size:9px">▾</div>
+                      </div>
+                      <div style="display:flex;gap:6px">
+                        <div style="flex:1;height:28px;border:1px solid #ddd5c6;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#5c5c5c">Mở trang</div>
+                        <div style="flex:1;height:28px;border:1px solid #0f6b4c;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#0f6b4c;font-weight:600">Nhập tay</div>
+                        <div style="flex:1;height:28px;border:1px solid #e6c9c9;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#a33">Xoá</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ FRAME B: LIST VIEW ============ -->
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12.5px;font-weight:600;letter-spacing:.02em;color:#6b6353">B · Thư viện — chế độ danh sách, chọn nhiều &amp; thao tác hàng loạt</div>
+        <div style="width:1440px;height:900px;background:#f4f1ea;border:1px solid #ddd5c6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 44px rgba(46,38,22,.12);color:#1a1a1a">
+
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px;flex:0 0 56px;padding:0 18px;background:#fff;border-bottom:1px solid #ddd5c6">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:26px;height:26px;border-radius:7px;background:#0f6b4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">ez</div>
+              <div style="font-size:17px;font-weight:700;letter-spacing:-.02em">ezaff</div>
+              <div style="width:1px;height:18px;background:#ddd5c6"></div>
+              <div style="font-size:12.5px;color:#6b6353">Nhóm: <span style="color:#0f6b4c;font-weight:600">Công nghệ</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="font-size:12.5px;color:#6b6353;font-variant-numeric:tabular-nums;margin-right:6px">176 sản phẩm trong nhóm</div>
+              <div style="height:32px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Nhập Excel</div>
+              <div style="height:32px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Xuất Excel</div>
+              <div style="height:32px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Cài đặt</div>
+            </div>
+          </div>
+
+          <div style="flex:1;min-height:0;display:flex">
+            <div style="width:236px;flex:0 0 236px;background:#fff;border-right:1px solid #ddd5c6;display:flex;flex-direction:column;padding:14px 10px 10px">
+              <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8a8272;padding:0 6px 8px">NHÓM</div>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#5c5c5c"></span>
+                  <span style="flex:1">Tất cả</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">1.248</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#be123c"></span>
+                  <span style="flex:1">Sale 11.11</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">86</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#0f6b4c"></span>
+                  <span style="flex:1">Đồ gia dụng</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">214</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#6d28d9"></span>
+                  <span style="flex:1">Mỹ phẩm</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">132</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#b45309"></span>
+                  <span style="flex:1">Mẹ &amp; bé</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">97</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;background:rgba(15,107,76,.12);font-size:13px;font-weight:600">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#1d4ed8"></span>
+                  <span style="flex:1">Công nghệ</span>
+                  <span style="font-size:11.5px;color:#6b6353;font-variant-numeric:tabular-nums">176</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#0e7490"></span>
+                  <span style="flex:1">Thời trang</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">289</span>
+                </div>
+              </div>
+              <div style="height:1px;background:#ddd5c6;margin:12px 6px"></div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8a8272;padding:0 6px 8px">CẦN XỬ LÝ</div>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#92620c"></span>
+                  <span style="flex:1">Thiếu thông tin</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">12</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#a33"></span>
+                  <span style="flex:1">Lỗi quét</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">3</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;font-size:13px">
+                  <span style="width:7px;height:7px;border-radius:999px;background:#c2b8a3"></span>
+                  <span style="flex:1">Chưa gán nhóm</span>
+                  <span style="font-size:11.5px;color:#8a8272;font-variant-numeric:tabular-nums">41</span>
+                </div>
+              </div>
+              <div style="flex:1"></div>
+              <div style="display:flex;gap:6px;padding-top:10px;border-top:1px solid #ddd5c6">
+                <div style="flex:1;height:32px;border:1px solid #ddd5c6;border-radius:8px;background:#faf8f3;display:flex;align-items:center;padding:0 10px;font-size:12.5px;color:#a49a84">Tên nhóm mới…</div>
+                <div style="height:32px;padding:0 12px;border:1px solid #0f6b4c;border-radius:8px;background:#0f6b4c;color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Tạo</div>
+              </div>
+            </div>
+
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px;padding:14px 18px 16px">
+
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="flex:1;height:36px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;display:flex;align-items:center;padding:0 12px;font-size:13px;color:#a49a84">Tìm theo tên, shop, ghi chú, danh mục…</div>
+                <div style="height:36px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:8px">Bộ lọc <span style="font-size:10.5px;color:#fff;background:#0f6b4c;border-radius:999px;padding:1px 6px">2</span></div>
+                <div style="height:36px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:170px">Sắp xếp: Mới nhất <span style="font-size:9px;color:#8a8272">▾</span></div>
+                <div style="display:flex;height:36px;border:1px solid #ddd5c6;border-radius:8px;overflow:hidden">
+                  <div style="padding:0 12px;display:flex;align-items:center;font-size:12.5px;font-weight:600;background:#fff;color:#5c5c5c">Lưới</div>
+                  <div style="padding:0 12px;display:flex;align-items:center;font-size:12.5px;font-weight:600;background:#0f6b4c;color:#fff;border-left:1px solid #ddd5c6">Danh sách</div>
+                </div>
+              </div>
+
+              <sc-if value="{{ showBulkBar }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex;align-items:center;gap:10px;background:#1a1a1a;color:#f5f2ea;border-radius:10px;padding:9px 12px">
+                  <span style="font-size:13px;font-weight:600">Đã chọn 3 sản phẩm</span>
+                  <span style="font-size:12px;opacity:.6">·</span>
+                  <span style="font-size:12.5px;opacity:.75">Chọn tất cả 176</span>
+                  <div style="flex:1"></div>
+                  <div style="height:30px;padding:0 12px;border:1px solid rgba(255,255,255,.28);border-radius:7px;font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:8px">Gán nhóm <span style="font-size:9px;opacity:.7">▾</span></div>
+                  <div style="height:30px;padding:0 12px;border:1px solid rgba(255,255,255,.28);border-radius:7px;font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:8px">Sao chép hàng loạt <span style="font-size:9px;opacity:.7">▾</span></div>
+                  <div style="height:30px;padding:0 12px;border:1px solid rgba(255,255,255,.28);border-radius:7px;font-size:12.5px;font-weight:600;display:flex;align-items:center">Xuất Excel</div>
+                  <div style="height:30px;padding:0 12px;border:1px solid rgba(214,140,140,.5);color:#f0b8b8;border-radius:7px;font-size:12.5px;font-weight:600;display:flex;align-items:center">Xoá</div>
+                </div>
+              </sc-if>
+
+              <div style="flex:1;min-height:0;background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);overflow:hidden;display:flex;flex-direction:column">
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #ddd5c6;background:#faf8f3;font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #0f6b4c;border-radius:4px;background:#0f6b4c"></span></div>
+                  <div>ẢNH</div>
+                  <div>SẢN PHẨM</div>
+                  <div>SÀN</div>
+                  <div style="text-align:right">GIÁ</div>
+                  <div>NHÓM</div>
+                  <div style="text-align:right">LƯỢT COPY</div>
+                  <div>NGÀY THÊM</div>
+                  <div>TRẠNG THÁI</div>
+                  <div></div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd;background:rgba(15,107,76,.06)">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #0f6b4c;border-radius:4px;background:#0f6b4c"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#ece7db"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Tai nghe Bluetooth Soundcore P20i chống ồn chủ động</div><div style="font-size:11.5px;color:#a49a84;margin-top:2px">Anker Việt Nam</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">TikTok</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">590.000 ₫</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">27</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">02/08/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 8px;border-radius:999px">Xong</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd;background:rgba(15,107,76,.06)">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #0f6b4c;border-radius:4px;background:#0f6b4c"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#ece7db"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Máy hút bụi cầm tay Xiaomi Mi Vacuum Mini</div><div style="font-size:11.5px;color:#a49a84;margin-top:2px">Xiaomi Official Store</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Shopee</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">899.000 ₫</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">31</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">01/08/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 8px;border-radius:999px">Xong</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd;background:rgba(15,107,76,.06)">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #0f6b4c;border-radius:4px;background:#0f6b4c"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#f3ece0"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Sạc dự phòng Anker 20.000mAh PD 30W</div><div style="font-size:11.5px;color:#92620c;margin-top:2px">Thiếu ảnh sản phẩm</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Lazada</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">749.000 ₫</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">9</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">31/07/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#92620c;background:rgba(146,98,12,.14);padding:2px 8px;border-radius:999px">Thiếu ảnh</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #ddd5c6;border-radius:4px"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#ece7db"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Bàn phím cơ Akko 3068B Plus World Tour</div><div style="font-size:11.5px;color:#a49a84;margin-top:2px">Akko Official Store</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Shopee</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">1.690.000 ₫</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">54</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">29/07/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 8px;border-radius:999px">Xong</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #ddd5c6;border-radius:4px"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#ece7db"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Camera an ninh Imou 360° 3MP trong nhà</div><div style="font-size:11.5px;color:#a49a84;margin-top:2px">Imou Vietnam</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Shopee</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">485.000 ₫</div>
+                  <div style="display:flex;gap:4px;white-space:nowrap"><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span><span style="font-size:10.5px;font-weight:600;color:#be123c;background:rgba(190,18,60,.12);padding:2px 7px;border-radius:999px">Sale</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">38</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">28/07/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 8px;border-radius:999px">Xong</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #ddd5c6;border-radius:4px"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#f6ecec"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Ổ cứng di động SSD Samsung T7 1TB</div><div style="font-size:11.5px;color:#a33;margin-top:2px">Không quét được — cần nhập tay</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Tiki</div>
+                  <div style="font-size:13px;font-weight:700;color:#c2b8a3;text-align:right">—</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#8a8272;background:rgba(196,186,163,.28);padding:2px 7px;border-radius:999px">Chưa gán nhóm</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">0</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">27/07/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#a33;background:rgba(163,51,51,.12);padding:2px 8px;border-radius:999px">Lỗi quét</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #ddd5c6;border-radius:4px"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#ece7db"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Loa Bluetooth JBL Go 4 chống nước IP67</div><div style="font-size:11.5px;color:#a49a84;margin-top:2px">JBL Flagship Store</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Shopee</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">890.000 ₫</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">21</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">25/07/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 8px;border-radius:999px">Xong</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #ddd5c6;border-radius:4px"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#ece7db"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Đèn bàn LED Xiaomi Mijia chống cận</div><div style="font-size:11.5px;color:#a49a84;margin-top:2px">Xiaomi Official Store</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Shopee</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">399.000 ₫</div>
+                  <div style="display:flex;gap:4px;white-space:nowrap"><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 7px;border-radius:999px">Gia dụng</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">17</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">24/07/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 8px;border-radius:999px">Xong</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #ddd5c6;border-radius:4px"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#ece7db"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Chuột không dây Logitech M331 Silent</div><div style="font-size:11.5px;color:#a49a84;margin-top:2px">Logitech Official</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Lazada</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">315.000 ₫</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">12</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">22/07/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 8px;border-radius:999px">Xong</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:38px 52px 1fr 96px 132px 168px 92px 108px 118px 44px;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #efe9dd">
+                  <div><span style="display:inline-block;width:15px;height:15px;border:1.5px solid #ddd5c6;border-radius:4px"></span></div>
+                  <div style="width:40px;height:40px;border-radius:7px;background:#ece7db"></div>
+                  <div style="min-width:0"><div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Giá đỡ điện thoại nhôm gấp gọn Ugreen</div><div style="font-size:11.5px;color:#a49a84;margin-top:2px">Ugreen Official Store</div></div>
+                  <div style="font-size:12.5px;color:#5c5c5c">Shopee</div>
+                  <div style="font-size:13px;font-weight:700;color:#0f6b4c;text-align:right;font-variant-numeric:tabular-nums">129.000 ₫</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#1d4ed8;background:rgba(29,78,216,.12);padding:2px 7px;border-radius:999px">Công nghệ</span></div>
+                  <div style="font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums">8</div>
+                  <div style="font-size:12px;color:#6b6353;font-variant-numeric:tabular-nums">21/07/2026</div>
+                  <div><span style="font-size:10.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:2px 8px;border-radius:999px">Xong</span></div>
+                  <div style="font-size:14px;color:#a49a84;text-align:center">⋯</div>
+                </div>
+
+                <div style="flex:1"></div>
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-top:1px solid #ddd5c6;background:#faf8f3;font-size:12px;color:#6b6353">
+                  <span>Hiển thị 1–10 trong 176 sản phẩm</span>
+                  <span>Cuộn để xem thêm · nhấn Space để xem nhanh</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============ ROW 2: SETTINGS + DIALOGS ============ -->
+    <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12.5px;font-weight:600;letter-spacing:.02em;color:#6b6353">C · Cài đặt — mẫu câu mời chào &amp; minh bạch phí</div>
+        <div style="width:1440px;height:900px;background:#f4f1ea;border:1px solid #ddd5c6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 44px rgba(46,38,22,.12);color:#1a1a1a">
+
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px;flex:0 0 56px;padding:0 18px;background:#fff;border-bottom:1px solid #ddd5c6">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:26px;height:26px;border-radius:7px;background:#0f6b4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">ez</div>
+              <div style="font-size:17px;font-weight:700;letter-spacing:-.02em">ezaff</div>
+              <div style="width:1px;height:18px;background:#ddd5c6"></div>
+              <div style="font-size:12.5px;color:#6b6353">Cài đặt</div>
+            </div>
+            <div style="height:32px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">← Về thư viện</div>
+          </div>
+
+          <div style="flex:1;min-height:0;padding:18px 24px 24px;display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;gap:8px">
+              <div style="height:34px;padding:0 16px;border-radius:999px;background:rgba(15,107,76,.14);border:1px solid rgba(15,107,76,.55);color:#0f6b4c;font-size:13px;font-weight:600;display:flex;align-items:center">Mẫu câu mời chào</div>
+              <div style="height:34px;padding:0 16px;border-radius:999px;background:#fff;border:1px solid #ddd5c6;font-size:13px;display:flex;align-items:center">Điều khoản &amp; phí</div>
+              <div style="height:34px;padding:0 16px;border-radius:999px;background:#fff;border:1px solid #ddd5c6;font-size:13px;display:flex;align-items:center">Dữ liệu &amp; sao lưu</div>
+              <div style="height:34px;padding:0 16px;border-radius:999px;background:#fff;border:1px solid #ddd5c6;font-size:13px;display:flex;align-items:center">Về ezaff</div>
+            </div>
+
+            <div style="flex:1;min-height:0;display:grid;grid-template-columns:420px 1fr;gap:14px">
+
+              <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;flex-direction:column;overflow:hidden">
+                <div style="padding:14px 16px 10px;border-bottom:1px solid #ddd5c6;display:flex;align-items:center;justify-content:space-between">
+                  <div>
+                    <div style="font-size:15px;font-weight:700">Mẫu câu</div>
+                    <div style="font-size:12px;color:#6b6353;margin-top:2px">6 mẫu · dùng khi nhấn Sao chép</div>
+                  </div>
+                  <div style="height:30px;padding:0 12px;border:1px solid #0f6b4c;border-radius:8px;background:#0f6b4c;color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">+ Mẫu mới</div>
+                </div>
+                <div style="padding:8px;display:flex;flex-direction:column;gap:4px">
+                  <div style="padding:10px 12px;border-radius:9px;background:rgba(15,107,76,.10);border:1px solid rgba(15,107,76,.35);display:flex;align-items:center;gap:8px">
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13.5px;font-weight:600">Giới thiệu chuẩn</div>
+                      <div style="font-size:11.5px;color:#6b6353;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">🛒 {ten} — chỉ {gia} · Mua tại: {link}</div>
+                    </div>
+                    <span style="font-size:10.5px;font-weight:700;color:#0f6b4c;background:rgba(15,107,76,.16);padding:2px 8px;border-radius:999px">Mặc định</span>
+                  </div>
+                  <div style="padding:10px 12px;border-radius:9px;display:flex;align-items:center;gap:8px">
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13.5px;font-weight:600">Deal sốc / flash sale</div>
+                      <div style="font-size:11.5px;color:#a49a84;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">GIẢM SỐC hôm nay: {ten} còn {gia}…</div>
+                    </div>
+                  </div>
+                  <div style="padding:10px 12px;border-radius:9px;display:flex;align-items:center;gap:8px">
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13.5px;font-weight:600">Review ngắn</div>
+                      <div style="font-size:11.5px;color:#a49a84;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Mình dùng {ten} được 2 tuần rồi…</div>
+                    </div>
+                  </div>
+                  <div style="padding:10px 12px;border-radius:9px;display:flex;align-items:center;gap:8px">
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13.5px;font-weight:600">Story / TikTok caption</div>
+                      <div style="font-size:11.5px;color:#a49a84;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Link ở bio nha mọi người 👇 {link}</div>
+                    </div>
+                  </div>
+                  <div style="padding:10px 12px;border-radius:9px;display:flex;align-items:center;gap:8px">
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13.5px;font-weight:600">Nhóm Zalo</div>
+                      <div style="font-size:11.5px;color:#a49a84;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">[SĂN SALE] {ten} — {gia} — {link}</div>
+                    </div>
+                  </div>
+                  <div style="padding:10px 12px;border-radius:9px;display:flex;align-items:center;gap:8px">
+                    <div style="flex:1;min-width:0">
+                      <div style="font-size:13.5px;font-weight:600">Chỉ link</div>
+                      <div style="font-size:11.5px;color:#a49a84;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{link}</div>
+                    </div>
+                    <span style="font-size:10.5px;font-weight:600;color:#8a8272;background:rgba(196,186,163,.3);padding:2px 8px;border-radius:999px">Hệ thống</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:14px;min-height:0">
+                <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);padding:16px 18px;display:flex;flex-direction:column;gap:12px;flex:1;min-height:0">
+                  <div style="display:flex;align-items:center;justify-content:space-between">
+                    <div style="font-size:15px;font-weight:700">Sửa mẫu — Giới thiệu chuẩn</div>
+                    <div style="display:flex;gap:8px">
+                      <div style="height:30px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;background:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Nhân bản</div>
+                      <div style="height:30px;padding:0 12px;border:1px solid #0f6b4c;border-radius:8px;background:#0f6b4c;color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Lưu mẫu</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex;flex-direction:column;gap:5px">
+                    <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">TÊN MẪU</div>
+                    <div style="height:36px;border:1px solid #ddd5c6;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:13.5px">Giới thiệu chuẩn</div>
+                  </div>
+
+                  <div style="display:flex;flex-direction:column;gap:5px;flex:1;min-height:0">
+                    <div style="display:flex;align-items:center;justify-content:space-between">
+                      <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">NỘI DUNG</div>
+                      <div style="display:flex;gap:5px">
+                        <span style="font-size:11px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:3px 8px;border-radius:6px">{ten}</span>
+                        <span style="font-size:11px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:3px 8px;border-radius:6px">{gia}</span>
+                        <span style="font-size:11px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:3px 8px;border-radius:6px">{shop}</span>
+                        <span style="font-size:11px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:3px 8px;border-radius:6px">{danhgia}</span>
+                        <span style="font-size:11px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);padding:3px 8px;border-radius:6px">{link}</span>
+                      </div>
+                    </div>
+                    <div style="flex:1;min-height:120px;border:1px solid #ddd5c6;border-radius:8px;background:#faf8f3;padding:12px;font-size:13.5px;line-height:1.7;white-space:pre-wrap">🛒 {ten}
+💰 Giá chỉ {gia} — {danhgia}
+🏬 Shop: {shop}
+
+👉 Mua tại: {link}</div>
+                  </div>
+
+                  <div style="display:flex;flex-direction:column;gap:5px">
+                    <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">XEM TRƯỚC — NỒI CHIÊN KHÔNG DẦU LOCK&amp;LOCK 5.5L</div>
+                    <div style="border:1px solid #ddd5c6;border-radius:8px;background:#fff;padding:12px;font-size:13.5px;line-height:1.7;white-space:pre-wrap;color:#3a3a3a">🛒 Nồi chiên không dầu Lock&amp;Lock 5.5L điện tử
+💰 Giá chỉ 1.290.000 ₫ — 4,9★ · 12,3k đã bán
+🏬 Shop: Lock&amp;Lock Official Store
+
+👉 Mua tại: https://s.shopee.vn/2q8xK1a9Zv</div>
+                  </div>
+                </div>
+
+                <div style="background:#fff;border:1px solid #ddd5c6;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06);padding:14px 18px;display:flex;align-items:center;gap:22px">
+                  <div style="flex:1">
+                    <div style="font-size:13.5px;font-weight:700">Phí sử dụng — minh bạch</div>
+                    <div style="font-size:12.5px;color:#6b6353;margin-top:3px;line-height:1.5">Hết 1 ngày dùng thử, khoảng 5% lượt sao chép dùng link của tác giả app. 95% còn lại luôn là link của bạn. Nếu backend lỗi, app luôn dùng link của bạn.</div>
+                  </div>
+                  <div style="display:flex;gap:10px">
+                    <div style="width:132px;border:1px solid #ddd5c6;border-radius:10px;padding:10px 12px">
+                      <div style="font-size:11px;color:#8a8272">Tổng lượt copy</div>
+                      <div style="font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px">4.312</div>
+                    </div>
+                    <div style="width:132px;border:1px solid #ddd5c6;border-radius:10px;padding:10px 12px">
+                      <div style="font-size:11px;color:#8a8272">Link của bạn</div>
+                      <div style="font-size:20px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums;margin-top:2px">4.096</div>
+                    </div>
+                    <div style="width:132px;border:1px solid #ddd5c6;border-radius:10px;padding:10px 12px">
+                      <div style="font-size:11px;color:#8a8272">Link tác giả</div>
+                      <div style="font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px">216 <span style="font-size:12px;color:#8a8272;font-weight:600">5,0%</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- dialogs column -->
+      <div style="display:flex;flex-direction:column;gap:28px">
+
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="font-size:12.5px;font-weight:600;color:#6b6353">D · Thêm nhiều link cùng lúc</div>
+          <div style="width:720px;background:#fff;border:1px solid #ddd5c6;border-radius:14px;box-shadow:0 18px 44px rgba(46,38,22,.12);overflow:hidden;color:#1a1a1a">
+            <div style="padding:16px 20px;border-bottom:1px solid #ddd5c6;display:flex;align-items:center;justify-content:space-between">
+              <div style="font-size:16px;font-weight:700">Thêm link affiliate</div>
+              <div style="font-size:16px;color:#a49a84">✕</div>
+            </div>
+            <div style="padding:16px 20px 18px;display:flex;flex-direction:column;gap:12px">
+              <div style="border:1px solid #ddd5c6;border-radius:9px;background:#faf8f3;padding:11px 13px;font-size:12.5px;line-height:1.85;font-family:ui-monospace,Consolas,monospace;color:#3a3a3a;white-space:pre-wrap">https://s.shopee.vn/2q8xK1a9Zv
+https://s.shopee.vn/9fL2mQ7Ub3
+https://www.lazada.vn/products/i2938471.html
+https://vt.tiktok.com/ZS8kFq2mA/
+https://tiki.vn/p/12938471</div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="flex:1;font-size:12.5px;color:#6b6353">Mỗi link một dòng · trùng link sẽ được bỏ qua tự động</div>
+                <div style="height:34px;padding:0 14px;border:1px solid #ddd5c6;border-radius:8px;font-size:12.5px;font-weight:600;display:flex;align-items:center">Huỷ</div>
+                <div style="height:34px;padding:0 16px;border:1px solid #0f6b4c;border-radius:8px;background:#0f6b4c;color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center">Đang quét 3/5…</div>
+              </div>
+
+              <div style="height:5px;border-radius:999px;background:#ece7db;overflow:hidden"><div style="width:60%;height:100%;background:#0f6b4c"></div></div>
+
+              <div style="border:1px solid #ddd5c6;border-radius:10px;overflow:hidden">
+                <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid #efe9dd">
+                  <span style="flex:1;font-size:12px;font-family:ui-monospace,Consolas,monospace;color:#3a3a3a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">s.shopee.vn/2q8xK1a9Zv</span>
+                  <span style="font-size:11.5px;font-weight:600;color:#0f6b4c">Xong · Nồi chiên không dầu Lock&amp;Lock 5.5L</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid #efe9dd">
+                  <span style="flex:1;font-size:12px;font-family:ui-monospace,Consolas,monospace;color:#3a3a3a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">s.shopee.vn/9fL2mQ7Ub3</span>
+                  <span style="font-size:11.5px;font-weight:600;color:#8a8272">Trùng link — đã có trong thư viện</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid #efe9dd">
+                  <span style="flex:1;font-size:12px;font-family:ui-monospace,Consolas,monospace;color:#3a3a3a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">lazada.vn/products/i2938471.html</span>
+                  <span style="font-size:11.5px;font-weight:600;color:#b47814">Đang quét…</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid #efe9dd">
+                  <span style="flex:1;font-size:12px;font-family:ui-monospace,Consolas,monospace;color:#c2b8a3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">vt.tiktok.com/ZS8kFq2mA/</span>
+                  <span style="font-size:11.5px;color:#c2b8a3">Chờ</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;padding:9px 12px">
+                  <span style="flex:1;font-size:12px;font-family:ui-monospace,Consolas,monospace;color:#c2b8a3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">tiki.vn/p/12938471</span>
+                  <span style="font-size:11.5px;color:#c2b8a3">Chờ</span>
+                </div>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:10px;background:#f3faf3;border:1px solid #8fbc8f;border-radius:9px;padding:9px 12px;font-size:12.5px">
+                <span style="flex:1">Link quét lỗi vẫn được lưu — bạn có thể nhập tay tên, giá và ảnh sau.</span>
+                <span style="font-weight:600;color:#0f6b4c">Đã hiểu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="font-size:12.5px;font-weight:600;color:#6b6353">E · Nhập Excel — xem trước trước khi ghi</div>
+          <div style="width:720px;background:#fff;border:1px solid #ddd5c6;border-radius:14px;box-shadow:0 18px 44px rgba(46,38,22,.12);overflow:hidden;color:#1a1a1a">
+            <div style="padding:16px 20px;border-bottom:1px solid #ddd5c6;display:flex;align-items:center;justify-content:space-between">
+              <div style="font-size:16px;font-weight:700">Nhập từ Excel</div>
+              <div style="font-size:16px;color:#a49a84">✕</div>
+            </div>
+            <div style="padding:16px 20px 18px;display:flex;flex-direction:column;gap:13px">
+              <div style="display:flex;align-items:center;gap:10px;border:1px solid #ddd5c6;border-radius:9px;background:#faf8f3;padding:10px 12px">
+                <div style="width:34px;height:34px;border-radius:7px;background:#0f6b4c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">XLS</div>
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">link-aff-thang-7.xlsx</div>
+                  <div style="font-size:11.5px;color:#8a8272">D:\ezaff\backup · 143 dòng dữ liệu</div>
+                </div>
+                <div style="height:30px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;font-size:12.5px;font-weight:600;display:flex;align-items:center">Đổi file</div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+                <div style="border:1px solid #8fbc8f;background:#f3faf3;border-radius:10px;padding:11px 12px">
+                  <div style="font-size:11.5px;color:#4a7a5a">Hợp lệ</div>
+                  <div style="font-size:22px;font-weight:700;color:#0f6b4c;font-variant-numeric:tabular-nums">128</div>
+                </div>
+                <div style="border:1px solid #ddd5c6;border-radius:10px;padding:11px 12px">
+                  <div style="font-size:11.5px;color:#8a8272">Trùng link</div>
+                  <div style="font-size:22px;font-weight:700;font-variant-numeric:tabular-nums">12</div>
+                </div>
+                <div style="border:1px solid #e0a0a0;background:#fff5f5;border-radius:10px;padding:11px 12px">
+                  <div style="font-size:11.5px;color:#a33">Lỗi định dạng</div>
+                  <div style="font-size:22px;font-weight:700;color:#a33;font-variant-numeric:tabular-nums">3</div>
+                </div>
+                <div style="border:1px solid #ddd5c6;border-radius:10px;padding:11px 12px">
+                  <div style="font-size:11.5px;color:#8a8272">Tổng dòng</div>
+                  <div style="font-size:22px;font-weight:700;font-variant-numeric:tabular-nums">143</div>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:7px">
+                <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">VỚI 12 LINK TRÙNG</div>
+                <div style="display:flex;align-items:center;gap:9px;border:1px solid #0f6b4c;background:rgba(15,107,76,.07);border-radius:9px;padding:10px 12px">
+                  <span style="width:14px;height:14px;border-radius:999px;border:4px solid #0f6b4c;background:#fff"></span>
+                  <span style="font-size:13px;font-weight:600">Bỏ qua — giữ nguyên dữ liệu đang có</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:9px;border:1px solid #ddd5c6;border-radius:9px;padding:10px 12px">
+                  <span style="width:14px;height:14px;border-radius:999px;border:1.5px solid #c2b8a3;background:#fff"></span>
+                  <span style="font-size:13px">Ghi đè — cập nhật tên, giá, ảnh, ghi chú từ file</span>
+                </div>
+              </div>
+
+              <div style="font-size:12.5px;color:#6b6353;line-height:1.55">3 dòng lỗi sẽ được xuất ra <span style="font-family:ui-monospace,Consolas,monospace;background:rgba(196,186,163,.3);padding:1px 5px;border-radius:4px">link-aff-thang-7-loi.xlsx</span> để bạn sửa và nhập lại.</div>
+
+              <div style="display:flex;justify-content:flex-end;gap:9px;padding-top:2px">
+                <div style="height:36px;padding:0 16px;border:1px solid #ddd5c6;border-radius:8px;font-size:13px;font-weight:600;display:flex;align-items:center">Huỷ</div>
+                <div style="height:36px;padding:0 18px;border:1px solid #0f6b4c;border-radius:8px;background:#0f6b4c;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center">Nhập 128 sản phẩm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="font-size:12.5px;font-weight:600;color:#6b6353">F · Sửa sản phẩm — nhập tay khi quét lỗi</div>
+          <div style="width:720px;background:#fff;border:1px solid #ddd5c6;border-radius:14px;box-shadow:0 18px 44px rgba(46,38,22,.12);overflow:hidden;color:#1a1a1a">
+            <div style="padding:16px 20px;border-bottom:1px solid #ddd5c6;display:flex;align-items:center;justify-content:space-between">
+              <div style="font-size:16px;font-weight:700">Sửa sản phẩm</div>
+              <div style="font-size:16px;color:#a49a84">✕</div>
+            </div>
+            <div style="padding:16px 20px 18px;display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">LINK GỐC</div>
+                <div style="height:36px;border:1px solid #ddd5c6;border-radius:8px;background:#faf8f3;display:flex;align-items:center;padding:0 12px;font-size:12.5px;font-family:ui-monospace,Consolas,monospace;color:#3a3a3a;white-space:nowrap;overflow:hidden">https://tiki.vn/p/12938471?spid=88213</div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1fr 200px;gap:10px">
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">TÊN SẢN PHẨM</div>
+                  <div style="height:36px;border:1px solid #ddd5c6;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:13.5px">Bộ nồi inox 3 đáy Sunhouse 3 món</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">GIÁ (VND)</div>
+                  <div style="height:36px;border:1px solid #0f6b4c;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:13.5px;font-variant-numeric:tabular-nums;box-shadow:0 0 0 3px rgba(15,107,76,.12)">1.050.000</div>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">SHOP</div>
+                  <div style="height:36px;border:1px solid #ddd5c6;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:13.5px;color:#a49a84">Chưa có</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">DANH MỤC</div>
+                  <div style="height:36px;border:1px solid #ddd5c6;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:13.5px">Nhà bếp</div>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:5px">
+                <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">GHI CHÚ</div>
+                <div style="min-height:52px;border:1px solid #ddd5c6;border-radius:8px;padding:9px 12px;font-size:13px;color:#a49a84;line-height:1.5">Ghi chú riêng: hoa hồng, kỳ sale, ghi nhớ khi giới thiệu…</div>
+              </div>
+
+              <div style="display:flex;gap:12px;align-items:flex-start">
+                <div style="flex:1;display:flex;flex-direction:column;gap:5px">
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272">ẢNH SẢN PHẨM</div>
+                  <div style="display:flex;gap:8px">
+                    <div style="height:34px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;font-size:12.5px;font-weight:600;display:flex;align-items:center">Dán từ clipboard</div>
+                    <div style="height:34px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;font-size:12.5px;font-weight:600;display:flex;align-items:center">Chọn file…</div>
+                    <div style="height:34px;padding:0 12px;border:1px solid #ddd5c6;border-radius:8px;font-size:12.5px;font-weight:600;display:flex;align-items:center">Mở trang gốc</div>
+                  </div>
+                  <div style="font-size:12px;color:#0f6b4c;margin-top:2px">Ảnh mới sẽ được lưu vào máy, không phụ thuộc CDN của sàn.</div>
+                </div>
+                <div style="width:112px;height:88px;border:1px solid #ddd5c6;border-radius:9px;background:#ece7db;display:flex;align-items:center;justify-content:center;font-size:11px;color:#b3a992">Chưa có ảnh</div>
+              </div>
+
+              <div style="border:1px solid #ddd5c6;border-radius:9px;padding:11px 13px">
+                <div style="font-size:11px;font-weight:700;letter-spacing:.04em;color:#8a8272;margin-bottom:8px">NHÓM</div>
+                <div style="display:flex;flex-wrap:wrap;gap:8px">
+                  <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#0f6b4c;background:rgba(15,107,76,.12);border:1px solid rgba(15,107,76,.4);padding:5px 10px;border-radius:999px"><span style="width:7px;height:7px;border-radius:999px;background:#0f6b4c"></span>Đồ gia dụng</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#5c5c5c;border:1px solid #ddd5c6;padding:5px 10px;border-radius:999px"><span style="width:7px;height:7px;border-radius:999px;background:#be123c"></span>Sale 11.11</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#5c5c5c;border:1px solid #ddd5c6;padding:5px 10px;border-radius:999px"><span style="width:7px;height:7px;border-radius:999px;background:#6d28d9"></span>Mỹ phẩm</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#5c5c5c;border:1px solid #ddd5c6;padding:5px 10px;border-radius:999px"><span style="width:7px;height:7px;border-radius:999px;background:#b45309"></span>Mẹ &amp; bé</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#5c5c5c;border:1px solid #ddd5c6;padding:5px 10px;border-radius:999px"><span style="width:7px;height:7px;border-radius:999px;background:#1d4ed8"></span>Công nghệ</span>
+                  <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#8a8272;border:1px dashed #ddd5c6;padding:5px 10px;border-radius:999px">+ Nhóm mới</span>
+                </div>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:9px;padding-top:2px">
+                <div style="flex:1;font-size:12.5px;color:#8a8272">Sửa lần cuối: 27/07/2026 · 14:32</div>
+                <div style="height:36px;padding:0 16px;border:1px solid #ddd5c6;border-radius:8px;font-size:13px;font-weight:600;display:flex;align-items:center">Huỷ</div>
+                <div style="height:36px;padding:0 18px;border:1px solid #0f6b4c;border-radius:8px;background:#0f6b4c;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center">Lưu thay đổi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;clipboardLink&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Nguyên mẫu thêm link&quot;},&quot;sidebarCollapsed&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Trạng thái màn hình&quot;},&quot;showFilterChips&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Trạng thái màn hình&quot;},&quot;showBulkBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Trạng thái màn hình&quot;}}">
+class Component extends DCLogic {
+  state = { collapsed: null, added: [], toast: '', modal: false, draft: '', seq: 0 }
+
+  isLink(s) {
+    const t = (s || '').trim()
+    return /^https?:\/\/\S+$/i.test(t) && /(shopee|lazada|tiktok|tiki)\./i.test(t)
+  }
+
+  platformOf(u) {
+    if (/shopee/i.test(u)) return 'Shopee'
+    if (/lazada/i.test(u)) return 'Lazada'
+    if (/tiktok/i.test(u)) return 'TikTok'
+    return 'Tiki'
+  }
+
+  flash(msg) {
+    clearTimeout(this._toastT)
+    this.setState({ toast: msg })
+    this._toastT = setTimeout(() => this.setState({ toast: '' }), 3000)
+  }
+
+  addLinks(urls) {
+    const fresh = urls.map((u, i) => ({
+      id: this.state.seq + i,
+      url: u.trim(),
+      platform: this.platformOf(u),
+      title: u.trim().replace(/^https?:\/\//, ''),
+      price: 'Đang lấy giá…',
+      status: 'Đang quét…',
+      statusBg: '#b47814',
+      scanning: true,
+    }))
+    this.setState({ added: [...fresh, ...this.state.added], seq: this.state.seq + fresh.length, modal: false, draft: '' })
+    this.flash(fresh.length === 1 ? 'Đã thêm 1 link từ clipboard — đang quét thông tin' : 'Đã thêm ' + fresh.length + ' link — đang quét thông tin')
+    const ids = fresh.map((f) => f.id)
+    this._scanT = setTimeout(() => {
+      this.setState({
+        added: this.state.added.map((it) =>
+          ids.includes(it.id)
+            ? { ...it, title: 'Sản phẩm ' + it.platform + ' #' + (1000 + it.id), price: '349.000 ₫', status: 'Xong', statusBg: '#0f6b4c', scanning: false }
+            : it
+        ),
+      })
+    }, 1600)
+  }
+
+  onAddClick = async () => {
+    let txt = ''
+    try { txt = await navigator.clipboard.readText() } catch (e) { txt = '' }
+    if (!txt) txt = this.props.clipboardLink ?? ''
+    if (this.isLink(txt)) this.addLinks([txt])
+    else this.setState({ modal: true, draft: '' })
+  }
+
+  componentWillUnmount() { clearTimeout(this._toastT); clearTimeout(this._scanT) }
+
+  renderVals() {
+    const collapsed = this.state.collapsed ?? (this.props.sidebarCollapsed ?? false)
+    const draftLinks = this.state.draft.split('\n').filter((l) => this.isLink(l))
+    return {
+      collapsed,
+      expanded: !collapsed,
+      toggleSidebar: () => this.setState({ collapsed: !collapsed }),
+      addedItems: this.state.added,
+      toast: this.state.toast,
+      modal: this.state.modal,
+      draft: this.state.draft,
+      draftCount: draftLinks.length === 0 ? 'Chưa nhận được link hợp lệ' : 'Nhận được ' + draftLinks.length + ' link hợp lệ',
+      onAddClick: this.onAddClick,
+      onDraft: (e) => this.setState({ draft: e.target.value }),
+      closeModal: () => this.setState({ modal: false }),
+      submitDraft: () => { if (draftLinks.length) this.addLinks(draftLinks) },
+      showFilterChips: this.props.showFilterChips ?? true,
+      showBulkBar: this.props.showBulkBar ?? true,
+    }
+  }
+}
+</script>
+</body>
+</html>

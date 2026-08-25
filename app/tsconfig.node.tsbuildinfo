@@ -1,0 +1,1 @@
+{"root":["./electron/env.d.ts","./electron/main.ts","./electron/preload.ts","./electron/db/connection.ts","./electron/db/migrations.ts","./electron/ipc/registry.ts","./electron.vite.config.ts","./vitest.config.ts"],"version":"5.9.3"}

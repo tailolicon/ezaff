@@ -1,0 +1,20 @@
+# ezaff owner-link Worker (FR-10 / plan §4)
+# Secrets: set via `wrangler secret put` or `.dev.vars` locally — never commit.
+# Required for Shopee Open API provider (disabled without both):
+#   SHOPEE_APP_ID
+#   SHOPEE_SECRET
+
+name = "ezaff-owner-link"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+
+# KV: mapping table + response cache + rate-limit counters
+[[kv_namespaces]]
+binding = "OWNER_KV"
+# Replace with real IDs after `wrangler kv namespace create ezaff-owner`
+id = "26881d6c1bfb4d449c2308db5ce9b4ad"
+preview_id = "19487648726b4a0490b03fd131423b04"
+
+[vars]
+# Public non-secret flags only. Credentials stay in secrets / .dev.vars.
+ENVIRONMENT = "development"

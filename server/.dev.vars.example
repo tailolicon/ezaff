@@ -1,0 +1,6 @@
+# Copy to `.dev.vars` for local `wrangler dev`.
+# NEVER commit real credentials. `.dev.vars` should be gitignored.
+
+# Shopee Affiliate Open API (both required to enable shopeeOpenApiProvider)
+SHOPEE_APP_ID=
+SHOPEE_SECRET=

@@ -1,0 +1,877 @@
+== Kiểm tra token ==
+Token đủ quyền: đăng video + comment đều chạy được.
+Kho link chung: 132178 link
+Cache lượt xem: 1880 video đã biết
+Thư mục tạm: D:\ezaff-tmp (còn trống 16.5 GB)
+
+== Đang theo dõi tools/ezaff-jobs.json — Lưu là áp dụng ngay, không cần khởi động lại ==
+
+[quản lý] Chạy 'Kẻ trộm review' (mới) ← https://www.youtube.com/@PuPuVietsub003  (>= 10,000 view)
+[quản lý] Chạy 'Mạn Kịch AI' (mới) ← https://www.youtube.com/@thevietsub  (>= 50,000 view)
+Giao diện ezaff đang chạy tại http://127.0.0.1:8799
+Đóng cửa sổ này (hoặc Ctrl+C) để tắt.
+[23:52:33] [Kẻ trộm review] Page: Kẻ trộm review (id 1162976383575019)[23:52:33] [Mạn Kịch AI] Page: Mạn Kịch AI (id 1256373850891074)
+
+[23:52:35] [Mạn Kịch AI] Page có 51 video | sổ theo dõi 47 video
+[23:52:35] [Mạn Kịch AI] Trả 3 video còn nợ comment từ lần trước ...
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58231)
+Traceback (most recent call last):
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 424, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "E:\Project\ezaff\tools\ezaff-ui.py", line 392, in do_GET
+    return self._tra(200, "application/json",
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+                     json.dumps(trang_thai(), ensure_ascii=False).encode("utf-8"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project\ezaff\tools\ezaff-ui.py", line 369, in _tra
+    self.wfile.write(noi_dung)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[23:52:38] [Kẻ trộm review] Page có 211 video | sổ theo dõi 211 video
+[23:52:38] [Kẻ trộm review] Trả 1 video còn nợ comment từ lần trước ...
+[00:03:12]     ✔ comment 1/3 cho 2064264874190997 (id 2064264874190997_949043974896883)
+[00:03:28]     ✔ comment 2/3 cho 2064264874190997 (id 2064264874190997_2338631793345937)
+[00:03:45]     ✔ comment 3/3 cho 2064264874190997 (id 2064264874190997_1401699351898022)
+[00:03:50] [Kẻ trộm review] Kênh có 524 video, lọc >= 10,000 view
+[00:03:50] [Kẻ trộm review] [55/524] Full Version|| Exposing the Mind Thief || PuPu Sub | https://s.shopee.vn/80BjalGen6  (18,280 view)
+[00:03:50] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[00:04:10] [Kẻ trộm review] [143/524] Full Version || Title of the Corpse || PuPu Sub | https://s.shopee.vn/5q7F9p4jY4  (25,692 view)
+[00:04:10] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[00:04:23] [Kẻ trộm review] [284/524] Full End || SIÊU NHÂN ÁO CAM || PuPu Sub | https://s.shopee.vn/8AV9vzteyq  (143,812 view)
+[00:04:23] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[00:06:39] [Kẻ trộm review] [299/524] Full End || HỆ THỐNG PHẢN DIỆN TẨY TRẮNG || PuPu Sub | https://s.shopee.vn/2BDwk2Pbb0  (14,474 view)
+[00:06:39] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[00:08:45] [Kẻ trộm review]   [299] 1489 MB — đang upload ...
+[00:09:45] [Kẻ trộm review] [302/524] Full End || Thiên Tài Bại Liệt || PuPu Sub | https://s.shopee.vn/8fRQOMmCsC  (36,653 view)
+[00:09:45] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[00:11:17] [Kẻ trộm review] [359/524] Full End || Hệ Thống Đọc Thân : 1 Giờ Nhận 35 Triệu || PuPu Sub | https://s.shopee.vn/1gHgBbZ4tP  (15,857 view)
+[00:11:17] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[00:13:01] [Kẻ trộm review]   [359] 1214 MB — đang upload ...
+[00:15:36]     ✔ comment 1/3 cho 2086991748584761 (id 2086991748584761_1594111108729033)
+[00:15:51]     ✔ comment 2/3 cho 2086991748584761 (id 2086991748584761_1727100531748084)
+[00:16:07]     ✔ comment 3/3 cho 2086991748584761 (id 2086991748584761_2894464577580184)
+[00:22:53]     ✔ comment 1/3 cho 985433464524658 (id 985433464524658_1389248516729639)
+[00:23:10]     ✔ comment 2/3 cho 985433464524658 (id 985433464524658_1926156211353803)
+[00:23:28]     ✔ comment 3/3 cho 985433464524658 (id 985433464524658_1082919571332263)
+[00:23:35]     ✔ comment 1/3 cho 2806821113007782 (id 2806821113007782_1030922123064502)
+[00:23:51]     ✔ comment 2/3 cho 2806821113007782 (id 2806821113007782_1075771518309814)
+[00:24:09]     ✔ comment 3/3 cho 2806821113007782 (id 2806821113007782_1044825681676810)
+[00:24:18] [Mạn Kịch AI] Kênh có 1025 video, lọc >= 50,000 view
+[00:24:18] [Mạn Kịch AI] [3/1025] Full ( Tập 1-18 ) | Tái Sinh, Tôi Từ Bỏ Hoa Khôi Để Yêu Tiểu Thư Giàu Có | Thế Vietsub | https://s.shopee.vn/2Vqn0iSb6k  (351,098 view)
+[00:24:18] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:25:32] [Mạn Kịch AI] [4/1025] Full ( Tập 1-10 ) | Xuyên Không Vào Tiểu Thuyết Làm Phản Diện | Thiên Mệnh Võ Thần | Thế Vietsub | https://s.shopee.vn/20uWMq2bxV  (147,487 view)
+[00:25:32] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:26:00] [Mạn Kịch AI] [5/1025] Full Tập 1-5 | Lỡ Làm Nữ Thần Có Bầu, Tôi Kích Hoạt Hệ Thống Bố Bỉm Sữa | Thế Vietsub | https://s.shopee.vn/8fRQRrNNrr  (257,595 view)
+[00:26:00] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:26:27] [Mạn Kịch AI] [8/1025] Full ( Tập 1-3 ) | Em Gái Bị Sát Hại Tôi Một Mình Đồ Sát Cả Băng Đảng | Ác Quỷ Báo Thù | Thế Vietsub | https://s.shopee.vn/AAGE5FeQLI  (80,952 view)
+[00:26:27] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:26:38] [Mạn Kịch AI] [19/1025] Full ( Tập 1-15 ) | Thanh Mai Của Tôi Là Người Tái Sinh | Thế Vietsub | https://s.shopee.vn/4LIREYtzQ0  (237,312 view)
+[00:26:38] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:27:29] [Mạn Kịch AI] [33/1025] Full ( Tập 1-7 ) | Tái Sinh Từ Kẻ Bỏ Đi Trở Thành Tỷ Phú | Thế Vietsub | https://s.shopee.vn/W5ih7vToF  (231,533 view)
+[00:27:29] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:27:53] [Mạn Kịch AI] [51/1025] Full ( Tập 1-2 ) | Thiếu Gia Giàu Có Trải Nghiệm Cuộc Sống | Thế Vietsub | https://s.shopee.vn/9fJxUPUgPr  (73,266 view)
+[00:27:53] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:27:59] [Mạn Kịch AI] [57/1025] Full ( Tập 1-4 ) | Siêu Cấp Hệ Thống Tiền Tệ Chỉ Một Đêm Thành Tỷ Phú Mạnh Nhất | Thế Vietsub | https://s.shopee.vn/4Az17LLRH1  (55,558 view)
+[00:27:59] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:28:11] [Mạn Kịch AI] [119/1025] Full ( Tập 1-70 ) | Siêu Cấp Thiên Sư Máy Dập Tôi Bụp Hết Mỹ Nữ Hàng Khủng | Thế Vietsub | https://s.shopee.vn/6pzmDpcNGb  (83,304 view)
+[00:28:11] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:36:09] [Mạn Kịch AI]   [119] 1769 MB — đang upload ...
+[00:37:09] [Mạn Kịch AI] [149/1025] Full ( Tập 1-30 ) | Tái Sinh, Tôi Từ Bỏ Hoa Khôi Để Yêu Tiểu Thư Giàu Có | Thế Vietsub | https://s.shopee.vn/2BDwZW22Eb  (68,268 view)
+[00:37:09] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:41:48] [Mạn Kịch AI]   [149] 2394 MB — đang upload ...
+[00:42:48] [Mạn Kịch AI] [156/1025] Full Version | Thần Chiến Truy Phong | Thế Vietsub | https://s.shopee.vn/5q7EvZJbk7  (105,572 view)
+[00:42:48] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+ERROR: [download] Got error: 3149069 bytes read, 7221721 more expected
+[00:45:41] [Mạn Kịch AI]   ✘ Lỗi tải: ERROR: [download] Got error: 3149069 bytes read, 7221721 more expected
+[00:46:10] [Kẻ trộm review]   [359] ✔ ĐÃ ĐĂNG (fb id: 1582420859985665) sau 1989s  | nợ 3 comment
+[00:46:10] [Kẻ trộm review] [367/524] Full End ||  Chàng Ma Tôn Và Nàng Nữ Đế || PuPu Sub | https://s.shopee.vn/9pdNs7ICdK  (16,089 view)
+[00:46:10] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[00:46:42] [Mạn Kịch AI] [187/1025] Full Version | Shiper Kích Hoạt Hệ Thống : Tôi Trở Thành Siêu Cấp Binh Vương | Thế Vietsub | https://s.shopee.vn/2LXMkD2CKN  (1,259,151 view)
+[00:46:42] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[00:49:06] [Kẻ trộm review]   [299] ✔ ĐÃ ĐĂNG (fb id: 1816866829756025) sau 2421s  | nợ 3 comment
+[00:50:21] [Mạn Kịch AI]   [187] 1522 MB — đang upload ...
+[00:51:21] [Kẻ trộm review]   [367] 2451 MB — đang upload ...
+[00:52:23] [Kẻ trộm review] [368/524] Full End || My Sister Is a Cultivation Addict and I Became Unbeatable Just by Sleeping || PuPu Sub | https://s.shopee.vn/8AV9tF7X4K  (10,843 view)
+[00:52:23] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[00:53:14]     Facebook chê khối 1 MB — giảm còn 34 MB rồi gửi lại ...
+[00:53:31] [Kẻ trộm review]   [368] 793 MB — đang upload ...
+[01:17:11] [Kẻ trộm review]   [368] ✔ ĐÃ ĐĂNG (fb id: 29107886125498775) sau 1419s  | nợ 3 comment
+[01:17:11] [Kẻ trộm review] [392/524] Full End ||Nữ Ma Đầu Và Cuốn Nhật Ký Của Kẻ Phản Bội.  || PuPu Sub | https://s.shopee.vn/2LXMkiXbVn  (12,071 view)
+[01:17:11] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[01:21:02] [Kẻ trộm review]   [392] 2251 MB — đang upload ...
+[01:23:02]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 1,555,048,576 ...
+[01:29:26] [Mạn Kịch AI]   [119] ✔ ĐÃ ĐĂNG (fb id: 2154825665095292) sau 3197s  | nợ 3 comment
+[01:29:26] [Mạn Kịch AI] [188/1025] Full ( Tập 1-50 ) | Biệt Đội Siêu Cấp Sinh Tồn Ngày Tận Thế | Thế Vietsub | https://s.shopee.vn/904GhiB5jp  (70,157 view)
+[01:29:26]   ⏸ Ổ đĩa chỉ còn 7.9 GB — chờ video đang upload xong để giải phóng chỗ ...
+[01:33:52] [Mạn Kịch AI]   [187] ✔ ĐÃ ĐĂNG (fb id: 2559011637931140) sau 2611s  | nợ 3 comment
+[01:33:56] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[01:36:43] [Mạn Kịch AI]   [188] 1893 MB — đang upload ...
+[01:37:45] [Mạn Kịch AI] [194/1025] Full ( Tập 1-32 ) | Hệ Thống Ép Ta Vô Địch Võ Đạo | Thế Vietsub | https://s.shopee.vn/9pdNrmRiWy  (542,722 view)
+[01:37:45]   ⏸ Ổ đĩa chỉ còn 7.5 GB — chờ video đang upload xong để giải phóng chỗ ...
+[01:47:22] [Mạn Kịch AI]   [149] ✔ ĐÃ ĐĂNG (fb id: 1529813771957233) sau 3934s  | nợ 3 comment
+[01:47:45] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[01:48:41] [Mạn Kịch AI]   [194] 633 MB — đang upload ...
+[01:49:47] [Mạn Kịch AI] [197/1025] Full End | Vợ Tôi Là Siêu Cấp Thiên Sư | Thế Vietsub | https://s.shopee.vn/4LIRGqGqX5  (125,184 view)
+[01:49:47] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[01:50:37] [Mạn Kịch AI]   [197] 268 MB — đang upload ...
+[01:57:31] [Mạn Kịch AI]   [197] ✔ ĐÃ ĐĂNG (fb id: 1296653349036017) sau 414s  | nợ 3 comment
+[01:57:31] [Mạn Kịch AI] [202/1025] Full ( Tập 1-27 ) | Thanh Mai Của Tôi Là Người Tái Sinh | Thế Vietsub | https://s.shopee.vn/20uWXQ3Wtx  (243,191 view)
+[01:57:31] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[01:59:10] [Mạn Kịch AI]   [202] 1102 MB — đang upload ...
+[01:59:32] [Kẻ trộm review]   [367] ✔ ĐÃ ĐĂNG (fb id: 1432941118997867) sau 4091s  | nợ 3 comment
+[01:59:32] [Kẻ trộm review] [407/524] Full End ||  Thử Thách Của Cô Kết Thúc Rồi! || PuPu Sub | https://s.shopee.vn/1BLPPbEtrX  (20,709 view)
+[01:59:32] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[02:00:26] [Kẻ trộm review]   [407] 593 MB — đang upload ...
+[02:00:33]     ✔ comment 1/3 cho 1582420859985665 (id 1582420859985665_910476811622226)
+[02:00:49]     ✔ comment 2/3 cho 1582420859985665 (id 1582420859985665_1576418377304841)
+[02:01:05]     ✔ comment 3/3 cho 1582420859985665 (id 1582420859985665_2334242057115317)
+[02:01:12]     ✔ comment 1/3 cho 1816866829756025 (id 1816866829756025_1895393608532448)
+[02:01:26]     ✔ comment 2/3 cho 1816866829756025 (id 1816866829756025_1363779598754844)
+[02:01:38]     ✔ comment 3/3 cho 1816866829756025 (id 1816866829756025_1777188680294519)
+[02:01:47]     ✔ comment 1/3 cho 29107886125498775 (id 29107886125498775_1999652627356275)
+[02:02:02]     ✔ comment 2/3 cho 29107886125498775 (id 29107886125498775_1097910009429953)
+[02:02:17]     ✔ comment 3/3 cho 29107886125498775 (id 29107886125498775_4270987453140479)
+[02:04:29] [Mạn Kịch AI]   [194] ✔ ĐÃ ĐĂNG (fb id: 2270637063738510) sau 949s  | nợ 3 comment
+[02:04:29] [Mạn Kịch AI] [205/1025] Full ( Tập 1-14 ) | Tôi Trả Thù Gia Đình Và Tên Thiếu Gia Giả | Thế Vietsub | https://s.shopee.vn/30n3divprm  (230,129 view)
+[02:04:29] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[02:04:57] [Mạn Kịch AI]   [205] 304 MB — đang upload ...
+[02:12:47] [Mạn Kịch AI]   [205] ✔ ĐÃ ĐĂNG (fb id: 1066723255882959) sau 471s  | nợ 3 comment
+[02:12:48] [Mạn Kịch AI] [206/1025] Full End | Tiểu Thư Giả Được 6 Người Anh Sủng Ái | Thế Vietsub | https://s.shopee.vn/19SCeqPgA  (229,772 view)
+[02:12:48] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[02:13:50] [Mạn Kịch AI]   [206] 672 MB — đang upload ...
+[02:13:59]     ✔ comment 1/3 cho 2559011637931140 (id 2559011637931140_1392543116179692)
+[02:14:13]     ✔ comment 2/3 cho 2559011637931140 (id 2559011637931140_2203783247136415)
+[02:14:27]     ✔ comment 3/3 cho 2559011637931140 (id 2559011637931140_1366452515035289)
+[02:14:34]     ✔ comment 1/3 cho 1296653349036017 (id 1296653349036017_1797002975075591)
+[02:14:47]     ✔ comment 2/3 cho 1296653349036017 (id 1296653349036017_1492434792641569)
+[02:15:00]     ✔ comment 3/3 cho 1296653349036017 (id 1296653349036017_1716338582914793)
+[02:16:04] [Kẻ trộm review]   [407] ✔ ĐÃ ĐĂNG (fb id: 2813883755663374) sau 938s  | nợ 3 comment
+[02:16:04] [Kẻ trộm review] [408/524] Full End || Sinh tồn Trên Cáp Treo || PuPu Sub | https://s.shopee.vn/7psJMdjCXE  (48,535 view)
+[02:16:04] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[02:17:33] [Kẻ trộm review]   [408] 939 MB — đang upload ...
+[02:19:57] [Kẻ trộm review]   [392] ✔ ĐÃ ĐĂNG (fb id: 1719256942437819) sau 3535s  | nợ 3 comment
+[02:19:57] [Kẻ trộm review] [422/524] Full End || QUY TẮC CỦA LỆ QUỶ || PuPu Sub | https://s.shopee.vn/19S30FLbn  (11,019 view)
+[02:19:57] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[02:21:00] [Kẻ trộm review]   [422] 695 MB — đang upload ...
+[02:26:57] [Mạn Kịch AI]   [188] ✔ ĐÃ ĐĂNG (fb id: 2135081377112354) sau 3014s  | nợ 3 comment
+[02:26:57] [Mạn Kịch AI] [207/1025] Full ( Tập 1-55 ) | Hệ Thống Hồ Cá Vạn Cân Thách Thức Mọi Cần Thủ | Thế Vietsub | https://s.shopee.vn/60QfFvNEBL  (599,348 view)
+[02:26:57] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[02:27:58] [Mạn Kịch AI]   [202] ✔ ĐÃ ĐĂNG (fb id: 1084637597557934) sau 1728s  | nợ 3 comment
+[02:29:05] [Mạn Kịch AI]   [207] 1470 MB — đang upload ...
+[02:29:14]     ✔ comment 1/3 cho 1529813771957233 (id 1529813771957233_2255627721941102)
+[02:29:28]     ✔ comment 2/3 cho 1529813771957233 (id 1529813771957233_3064097337122578)
+[02:29:43]     ✔ comment 3/3 cho 1529813771957233 (id 1529813771957233_2176417619591788)
+[02:29:51]     ✔ comment 1/3 cho 2270637063738510 (id 2270637063738510_894788079994574)
+[02:30:06]     ✔ comment 2/3 cho 2270637063738510 (id 2270637063738510_1051953801100234)
+[02:30:21]     ✔ comment 3/3 cho 2270637063738510 (id 2270637063738510_831802886589071)
+[02:30:28]     ✔ comment 1/3 cho 1066723255882959 (id 1066723255882959_1716555903001091)
+[02:30:41]     ✔ comment 2/3 cho 1066723255882959 (id 1066723255882959_1041098068802530)
+[02:30:55]     ✔ comment 3/3 cho 1066723255882959 (id 1066723255882959_1971457733372349)
+[02:31:55] [Mạn Kịch AI]   [206] ✔ ĐÃ ĐĂNG (fb id: 2329377897872115) sau 1084s  | nợ 3 comment
+[02:31:58] [Mạn Kịch AI] [208/1025] Full ( Tập 1-60 ) | Siêu Cấp Tiêu Y Tiên Mạnh Nhất | Thế Vietsub | https://s.shopee.vn/9V0XH6mO8F  (99,144 view)
+[02:31:58] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+ERROR: [download] Got error: 9352231 bytes read, 944807 more expected
+[02:32:25] [Mạn Kịch AI]   ✘ Lỗi tải: ERROR: [download] Got error: 9352231 bytes read, 944807 more expected
+[02:33:29] [Mạn Kịch AI] [209/1025] Full ( Tập 1-27 ) | Hệ Thống Nghe Lời Xúi Bậy | Thế Vietsub | https://s.shopee.vn/3LPuBb04xz  (276,323 view)
+[02:33:29] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[02:33:47] [Mạn Kịch AI]   [209] 198 MB — đang upload ...
+[02:34:53] [Mạn Kịch AI] [212/1025] Full ( Tập 1-55 ) | Siêu Cấp Shiper Tu Tiên Giả | Thế Vietsub | https://s.shopee.vn/6pzm7bEjbe  (129,381 view)
+[02:34:53] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[02:35:35] [Mạn Kịch AI]   [212] 462 MB — đang upload ...
+[02:38:43] [Kẻ trộm review]   [422] ✔ ĐÃ ĐĂNG (fb id: 1818213416275668) sau 1063s  | nợ 3 comment
+[02:38:43] [Kẻ trộm review] [469/524] Full End || Rise of the Forbidden Ancient God || PuPu Sub | https://s.shopee.vn/2LXMxfqTs0  (13,394 view)
+[02:38:43] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[02:39:03] [Mạn Kịch AI]   [209] ✔ ĐÃ ĐĂNG (fb id: 2313035832769250) sau 317s  | nợ 3 comment
+[02:39:03] [Mạn Kịch AI] [213/1025] Full ( Tập 1-75 ) | Tiên Đế Thức Giấc Sau 10 Vạn Năm | Thế Vietsub | https://s.shopee.vn/2qTdYD2G9f  (107,394 view)
+[02:39:03] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[02:40:33] [Kẻ trộm review]   [469] 880 MB — đang upload ...
+[02:40:42]     ✔ comment 1/3 cho 2813883755663374 (id 2813883755663374_2064671857589531)
+[02:40:57]     ✔ comment 2/3 cho 2813883755663374 (id 2813883755663374_1976054359600706)
+[02:41:13]     ✔ comment 3/3 cho 2813883755663374 (id 2813883755663374_2168882063971319)
+[02:41:39] [Mạn Kịch AI]   [213] 1267 MB — đang upload ...
+[02:42:53] [Kẻ trộm review]   [408] ✔ ĐÃ ĐĂNG (fb id: 1531473018128059) sau 1520s  | nợ 3 comment
+[02:43:11] [Kẻ trộm review] [513/524] Full Mùa 1 || Nam Thần Không Theo Kịch Bản | PuPu Sub. | https://s.shopee.vn/3VjKAYCb2k  (67,251 view)
+[02:43:11] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[02:44:35] [Kẻ trộm review]   [513] 922 MB — đang upload ...
+[02:45:53] [Kẻ trộm review] Chờ các video đang upload hoàn tất ...
+[02:48:09] [Mạn Kịch AI]   [212] ✔ ĐÃ ĐĂNG (fb id: 2305811443508139) sau 754s  | nợ 3 comment
+[02:48:09] [Mạn Kịch AI] [215/1025] Full ( Tập 1-21 ) | Hệ Thống Triệu Hồi Đàn Em Vô Hạn | Thế Vietsub | https://s.shopee.vn/1qb6MnqcfC  (319,589 view)
+[02:48:09] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[02:48:28] [Mạn Kịch AI]   [215] 203 MB — đang upload ...
+[02:48:36]     ✔ comment 1/3 cho 2154825665095292 (id 2154825665095292_1591740439203160)
+[02:48:50]     ✔ comment 2/3 cho 2154825665095292 (id 2154825665095292_1590641076027297)
+[02:49:05]     ✔ comment 3/3 cho 2154825665095292 (id 2154825665095292_1715272823087773)
+[02:49:18]     ✔ comment 1/3 cho 2313035832769250 (id 2313035832769250_1630679905345940)
+[02:49:32]     ✔ comment 2/3 cho 2313035832769250 (id 2313035832769250_1060576596697130)
+[02:49:45]     ✔ comment 3/3 cho 2313035832769250 (id 2313035832769250_1366343818359825)
+[02:54:41] [Mạn Kịch AI]   [215] ✔ ĐÃ ĐĂNG (fb id: 1056043783676063) sau 373s  | nợ 3 comment
+[02:54:41] [Mạn Kịch AI] [216/1025] Full ( Tập 1-42 ) | Côn Lôn  Tiên Tổ Tái Xuất Đại Chiến Người Ngoài Hành Tinh | Thế Vietsub | https://s.shopee.vn/8fRQWmIDRV  (57,527 view)
+[02:54:41] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+ERROR: [download] Got error: 2097136 bytes read, 8289998 more expected
+[02:54:55] [Mạn Kịch AI]   ✘ Lỗi tải: ERROR: [download] Got error: 2097136 bytes read, 8289998 more expected
+[02:56:06] [Mạn Kịch AI] [221/1025] Full End | Thiếu Gia Thật Tái Sinh , Ba Mẹ Có Thể Nghe Tiếng Lòng Của Tôi | Thế Vietsub | https://s.shopee.vn/AUt4hoRlKz  (260,342 view)
+[02:56:06] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[02:56:30] [Mạn Kịch AI]   [221] 269 MB — đang upload ...
+[02:56:40]     ✔ comment 1/3 cho 1084637597557934 (id 1084637597557934_2973999506264870)
+[02:56:55]     ✔ comment 2/3 cho 1084637597557934 (id 1084637597557934_1320344081154788)
+[02:57:09]     ✔ comment 3/3 cho 1084637597557934 (id 1084637597557934_2078903479383799)
+[02:57:19]     ✔ comment 1/3 cho 2329377897872115 (id 2329377897872115_1388122856583733)
+[02:57:33]     ✔ comment 2/3 cho 2329377897872115 (id 2329377897872115_1573994477843532)
+[02:57:46]     ✔ comment 3/3 cho 2329377897872115 (id 2329377897872115_1053713947584344)
+[03:04:57] [Mạn Kịch AI]   [221] ✔ ĐÃ ĐĂNG (fb id: 810211405488973) sau 507s  | nợ 3 comment
+[03:04:57] [Mạn Kịch AI] [222/1025] Full Version | Từ Tân Binh Quậy Nhất Tôi Trở Thành Siêu Cấp Binh Vương | Thế Vietsub | https://s.shopee.vn/8AV9s5i6sF  (288,039 view)
+[03:04:57] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[03:06:36] [Mạn Kịch AI]   [222] 1078 MB — đang upload ...
+[03:06:45]     ✔ comment 1/3 cho 1056043783676063 (id 1056043783676063_1035545935950141)
+[03:07:00]     ✔ comment 2/3 cho 1056043783676063 (id 1056043783676063_1632190681859880)
+[03:07:15]     ✔ comment 3/3 cho 1056043783676063 (id 1056043783676063_1336212018585089)
+[03:07:34] [Kẻ trộm review]   [469] ✔ ĐÃ ĐĂNG (fb id: 1826190738403082) sau 1621s  | nợ 3 comment
+[03:08:41]     Facebook chê khối 1 MB — giảm còn 34 MB rồi gửi lại ...
+[03:10:56] [Mạn Kịch AI]   [207] ✔ ĐÃ ĐĂNG (fb id: 1616732786541018) sau 2511s  | nợ 3 comment
+[03:10:56] [Mạn Kịch AI] [226/1025] Full ( Tập 1-30 ) | Các Bộ Phận Trên Cơ Thể Tôi Đều Có Suy Nghĩ Độc Lập | Thế Vietsub | https://s.shopee.vn/9Kh7EmwHsm  (89,084 view)
+[03:10:56] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[03:11:46] [Mạn Kịch AI]   [226] 546 MB — đang upload ...
+[03:11:53]     ✔ comment 1/3 cho 2305811443508139 (id 2305811443508139_1286584593428935)
+[03:12:04] [Kẻ trộm review]   [513] ✔ ĐÃ ĐĂNG (fb id: 1030225429753931) sau 1649s  | nợ 3 comment
+[03:12:04] [Kẻ trộm review] Trả nốt 6 video còn nợ comment ...
+[03:12:07]     ✔ comment 2/3 cho 2305811443508139 (id 2305811443508139_1078784874587199)
+[03:12:11]     ✔ comment 1/3 cho 1432941118997867 (id 1432941118997867_1777889673559592)
+[03:12:21]     ✔ comment 3/3 cho 2305811443508139 (id 2305811443508139_2185302145368808)
+[03:12:26]     ✔ comment 2/3 cho 1432941118997867 (id 1432941118997867_994293616949282)
+[03:12:27]     ✔ comment 1/3 cho 810211405488973 (id 810211405488973_1715347389684145)
+[03:12:39]     ✔ comment 2/3 cho 810211405488973 (id 810211405488973_1381729863908995)
+[03:12:40]     ✔ comment 3/3 cho 1432941118997867 (id 1432941118997867_911185188734718)
+[03:12:48]     ✔ comment 1/3 cho 1719256942437819 (id 1719256942437819_1538931610599815)
+[03:12:53]     ✔ comment 3/3 cho 810211405488973 (id 810211405488973_1797303948368647)
+[03:13:02]     ✔ comment 2/3 cho 1719256942437819 (id 1719256942437819_28011763225109634)
+[03:13:16]     ✔ comment 3/3 cho 1719256942437819 (id 1719256942437819_1053681017390568)
+[03:13:23]     ✔ comment 1/3 cho 1818213416275668 (id 1818213416275668_1488753406603020)
+[03:13:37]     ✔ comment 2/3 cho 1818213416275668 (id 1818213416275668_1336489141802859)
+[03:13:52]     ✔ comment 3/3 cho 1818213416275668 (id 1818213416275668_1067133355859478)
+[03:18:39] [Mạn Kịch AI]   [213] ✔ ĐÃ ĐĂNG (fb id: 1705770510879143) sau 2221s  | nợ 3 comment
+[03:18:40] [Mạn Kịch AI] [227/1025] Full ( Tập 1-30 ) | Hệ Thống Thiên Mệnh Phản Diện | Thế Vietsub | https://s.shopee.vn/19S9rtXmb  (370,019 view)
+[03:18:40] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[03:19:34]     ✔ comment 1/3 cho 1531473018128059 (id 1531473018128059_1032082502954278)
+[03:19:40] [Mạn Kịch AI]   [227] 709 MB — đang upload ...
+[03:19:47]     ✔ comment 1/3 cho 2135081377112354 (id 2135081377112354_2084932619076341)
+[03:19:48]     ✔ comment 2/3 cho 1531473018128059 (id 1531473018128059_28332233226465302)
+[03:20:00]     ✔ comment 2/3 cho 2135081377112354 (id 2135081377112354_1941262333227737)
+[03:20:01]     ✔ comment 3/3 cho 1531473018128059 (id 1531473018128059_1465913425426119)
+[03:20:15]     ✔ comment 3/3 cho 2135081377112354 (id 2135081377112354_1749621909523523)
+[03:26:08] [Mạn Kịch AI]   [226] ✔ ĐÃ ĐĂNG (fb id: 1060667176669155) sau 862s  | nợ 3 comment
+[03:26:08] [Mạn Kịch AI] [228/1025] Full ( Tập 1-23 ) | Thức Tỉnh Huyết Mạch Lôi Tổ Cấp Cổ Thần | Thế Vietsub | https://s.shopee.vn/7psJUauUBa  (351,043 view)
+[03:26:08] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[03:26:59] [Mạn Kịch AI]   [228] 483 MB — đang upload ...
+[03:30:14]     ✔ comment 1/3 cho 1826190738403082 (id 1826190738403082_831764919927780)
+[03:30:28]     ✔ comment 2/3 cho 1826190738403082 (id 1826190738403082_1574435974061522)
+[03:30:41]     ✔ comment 3/3 cho 1826190738403082 (id 1826190738403082_2463226777414475)
+[03:30:48]     ✔ comment 1/3 cho 1030225429753931 (id 1030225429753931_1044961254935467)
+[03:31:03]     ✔ comment 2/3 cho 1030225429753931 (id 1030225429753931_1782775796502336)
+[03:31:19]     ✔ comment 3/3 cho 1030225429753931 (id 1030225429753931_1388860973180787)
+[03:31:19] [Kẻ trộm review] XONG: 10 đã đăng | 514 bỏ qua | 0 lỗi
+[03:35:51] [Mạn Kịch AI]   [222] ✔ ĐÃ ĐĂNG (fb id: 1556677135920847) sau 1755s  | nợ 3 comment
+[03:35:51] [Mạn Kịch AI] [230/1025] Full Version | Tướng Quân Xuyên Không Thành Binh Vương | Thế Vietsub | https://s.shopee.vn/1VyFoN2EgD  (95,491 view)
+[03:35:51] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[03:36:29] [Mạn Kịch AI]   [230] 427 MB — đang upload ...
+[03:40:07] [Mạn Kịch AI]   [227] ✔ ĐÃ ĐĂNG (fb id: 1042558525235072) sau 1227s  | nợ 3 comment
+[03:40:07] [Mạn Kịch AI] [237/1025] Full ( Tập 1-45 ) | Hệ Thống Cửa Hàng Cơ Khí Vạn Năng | Thế Vietsub | https://s.shopee.vn/2LXMoCcXU2  (388,307 view)
+[03:40:07] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[03:40:40] [Mạn Kịch AI]   [228] ✔ ĐÃ ĐĂNG (fb id: 2044442196155680) sau 820s  | nợ 3 comment
+[03:46:12] [Mạn Kịch AI]   [237] 2097 MB — đang upload ...
+[03:46:20]     ✔ comment 1/3 cho 1616732786541018 (id 1616732786541018_1055457800520363)
+[03:46:35]     ✔ comment 2/3 cho 1616732786541018 (id 1616732786541018_1378212390309274)
+[03:46:50]     ✔ comment 3/3 cho 1616732786541018 (id 1616732786541018_1939866246674676)
+[03:46:58]     ✔ comment 1/3 cho 1060667176669155 (id 1060667176669155_1656067659449106)
+[03:47:12]     ✔ comment 2/3 cho 1060667176669155 (id 1060667176669155_2126632531601813)
+[03:47:27]     ✔ comment 3/3 cho 1060667176669155 (id 1060667176669155_1389772463223030)
+[03:47:35] [Mạn Kịch AI]   [230] ✔ ĐÃ ĐĂNG (fb id: 3108220429372644) sau 665s  | nợ 3 comment
+[03:48:32] [Mạn Kịch AI] [239/1025] Full ( Tập 1-120 ) | Hệ Thống Vô Hạn Hoàn Tiền | Thế Vietsub | https://s.shopee.vn/9Kh7A7gUFo  (435,209 view)
+[03:48:32] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[03:50:27] [Mạn Kịch AI]   [239] 1426 MB — đang upload ...
+[03:51:32] [Mạn Kịch AI] [240/1025] Full ( Tập 1-50 ) | Bộ 3 Siêu Ngố - Kiếp Nạn Của Công Ty | Thế Vietsub | https://s.shopee.vn/3g2kKj0rtu  (54,016 view)
+[03:51:32] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[03:53:09] [Mạn Kịch AI]   [240] 1188 MB — đang upload ...
+[04:28:15] [Mạn Kịch AI]   [240] ✔ ĐÃ ĐĂNG (fb id: 1788497005512836) sau 2106s  | nợ 3 comment
+[04:28:15] [Mạn Kịch AI] [241/1025] Full Version | Tôi Trả Thù Gia Đình Và Tên Thiếu Gia Giả | Thế Vietsub | https://s.shopee.vn/8V80JgyR6W  (948,946 view)
+[04:28:15] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[04:29:25] [Mạn Kịch AI]   [241] 749 MB — đang upload ...
+[04:29:33]     ✔ comment 1/3 cho 1705770510879143 (id 1705770510879143_1440718364564569)
+[04:29:48]     ✔ comment 2/3 cho 1705770510879143 (id 1705770510879143_1432452885364932)
+[04:30:03]     ✔ comment 3/3 cho 1705770510879143 (id 1705770510879143_2127734197779766)
+[04:30:10]     ✔ comment 1/3 cho 1556677135920847 (id 1556677135920847_886455157566283)
+[04:30:24]     ✔ comment 2/3 cho 1556677135920847 (id 1556677135920847_1705613094899338)
+[04:30:38]     ✔ comment 3/3 cho 1556677135920847 (id 1556677135920847_1060932589650024)
+[04:30:47]     ✔ comment 1/3 cho 1042558525235072 (id 1042558525235072_1043500831736855)
+[04:31:02]     ✔ comment 2/3 cho 1042558525235072 (id 1042558525235072_1036803422428534)
+[04:31:16]     ✔ comment 3/3 cho 1042558525235072 (id 1042558525235072_1948055615894355)
+[04:31:24]     ✔ comment 1/3 cho 2044442196155680 (id 2044442196155680_1506912021190090)
+[04:31:38]     ✔ comment 2/3 cho 2044442196155680 (id 2044442196155680_2116616905959438)
+[04:31:51]     ✔ comment 3/3 cho 2044442196155680 (id 2044442196155680_1043598401613829)
+[04:31:58]     ✔ comment 1/3 cho 3108220429372644 (id 3108220429372644_2970736006605280)
+[04:32:06] [Mạn Kịch AI]   [239] ✔ ĐÃ ĐĂNG (fb id: 1020088937690318) sau 2499s  | nợ 3 comment
+[04:32:13]     ✔ comment 2/3 cho 3108220429372644 (id 3108220429372644_2460485631130372)
+[04:32:28]     ✔ comment 3/3 cho 3108220429372644 (id 3108220429372644_1998713737485609)
+[04:33:32] [Mạn Kịch AI] [244/1025] Full Version | Hệ Thống Binh Vương Tối Cường | Thế Vietsub | https://s.shopee.vn/1gHg0kkO9W  (131,180 view)
+[04:33:32] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[04:34:06] [Mạn Kịch AI]   [244] 415 MB — đang upload ...
+[04:46:57] [Mạn Kịch AI]   [244] ✔ ĐÃ ĐĂNG (fb id: 2076515966278745) sau 771s  | nợ 3 comment
+[04:46:57] [Mạn Kịch AI] [246/1025] Full ( Tập 1-20 ) | Con Cháu Liệt Sĩ Bị Bắt Nạt - Công Lý Có Tồn Tại | Thế Vietsub | https://s.shopee.vn/7psJIzRFyH  (130,270 view)
+[04:46:57] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[04:47:50] [Mạn Kịch AI]   [246] 658 MB — đang upload ...
+[04:48:06] [Mạn Kịch AI]   [237] ✔ ĐÃ ĐĂNG (fb id: 1584360433068044) sau 3714s  | nợ 3 comment
+[04:48:54] [Mạn Kịch AI] [247/1025] Full ( Tập 1-75 ) | Tôi Có Thể Thấy Tỷ Lệ Tử Vong - Phông Bạt Cuối Đời Liên Hệ Tôi | Thế Vietsub | https://s.shopee.vn/5ArYFQfuG7  (545,096 view)
+[04:48:54] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[04:51:26] [Mạn Kịch AI]   [247] 1698 MB — đang upload ...
+[04:51:57] [Mạn Kịch AI]   [241] ✔ ĐÃ ĐĂNG (fb id: 1041244135294412) sau 1352s  | nợ 3 comment
+[04:52:31] [Mạn Kịch AI] [248/1025] Full ( Tập 1-25 ) | Tôi Dùng Hệ Thống Tội Phạm Để Làm Cảnh Sát | Thế Vietsub | https://s.shopee.vn/20uWPM6D4P  (376,801 view)
+[04:52:31] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[04:53:02] [Mạn Kịch AI]   [248] 360 MB — đang upload ...
+[05:03:00] [Mạn Kịch AI]   [248] ✔ ĐÃ ĐĂNG (fb id: 1530834564946467) sau 598s  | nợ 3 comment
+[05:03:00] [Mạn Kịch AI] [249/1025] Full ( Tập 1-23 ) | Hệ Thống Chức Nghiệp Lão Bản Cấp SSS | Thế Vietsub | https://s.shopee.vn/9pdNoPnNSH  (162,197 view)
+[05:03:00] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[05:03:52] [Mạn Kịch AI]   [249] 586 MB — đang upload ...
+[05:04:00]     ✔ comment 1/3 cho 1788497005512836 (id 1788497005512836_1029169936565141)
+[05:04:14]     ✔ comment 2/3 cho 1788497005512836 (id 1788497005512836_2747463005639298)
+[05:04:29]     ✔ comment 3/3 cho 1788497005512836 (id 1788497005512836_1430771708879500)
+[05:04:36]     ✔ comment 1/3 cho 2076515966278745 (id 2076515966278745_1987951301914793)
+[05:04:50]     ✔ comment 2/3 cho 2076515966278745 (id 2076515966278745_2943931795959286)
+[05:05:03]     ✔ comment 3/3 cho 2076515966278745 (id 2076515966278745_897576220077887)
+[05:05:55] [Mạn Kịch AI]   [246] ✔ ĐÃ ĐĂNG (fb id: 2373310479866679) sau 1085s  | nợ 3 comment
+[05:06:09] [Mạn Kịch AI] [252/1025] Full Version | Tổ Sư Trộm Mộ Đột Kích Lăng Tần Thuỷ Hoàng | Thế Vietsub | https://s.shopee.vn/111zETTpxF  (107,515 view)
+[05:06:09] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[05:06:53] [Mạn Kịch AI]   [252] 516 MB — đang upload ...
+[05:18:58] [Mạn Kịch AI]   [249] ✔ ĐÃ ĐĂNG (fb id: 28140815892271268) sau 906s  | nợ 3 comment
+[05:18:58] [Mạn Kịch AI] [253/1025] Full Version | Hệ Thống Trú Ẩn Ngày Tận Thế - Tôi Có Thể Triệu Hồi Vô Hạn Anh Hùng | Thế Vietsub | https://s.shopee.vn/5q7F2QRHrz  (137,842 view)
+[05:18:58] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[05:20:15] [Mạn Kịch AI]   [252] ✔ ĐÃ ĐĂNG (fb id: 2090538321816448) sau 802s  | nợ 3 comment
+[05:20:27] [Mạn Kịch AI]   [253] 1031 MB — đang upload ...
+[05:20:34]     ✔ comment 1/3 cho 1020088937690318 (id 1020088937690318_992113383882637)
+[05:20:48]     ✔ comment 2/3 cho 1020088937690318 (id 1020088937690318_1220163676931402)
+[05:21:02]     ✔ comment 3/3 cho 1020088937690318 (id 1020088937690318_1036282745680433)
+[05:21:10]     ✔ comment 1/3 cho 1041244135294412 (id 1041244135294412_1808381220146388)
+[05:21:23]     ✔ comment 2/3 cho 1041244135294412 (id 1041244135294412_4153874254904569)
+[05:21:37]     ✔ comment 3/3 cho 1041244135294412 (id 1041244135294412_1045860064656770)
+[05:21:45]     ✔ comment 1/3 cho 1530834564946467 (id 1530834564946467_2805780066474102)
+[05:21:59]     ✔ comment 2/3 cho 1530834564946467 (id 1530834564946467_3446624778850511)
+[05:22:13]     ✔ comment 3/3 cho 1530834564946467 (id 1530834564946467_1364995458457487)
+[05:22:18]     ✔ comment 1/3 cho 2373310479866679 (id 2373310479866679_1547248787082957)
+[05:22:32]     ✔ comment 2/3 cho 2373310479866679 (id 2373310479866679_2280181252806228)
+[05:22:46]     ✔ comment 3/3 cho 2373310479866679 (id 2373310479866679_4237308503150609)
+[05:23:51] [Mạn Kịch AI] [256/1025] Full ( Phần 1 )  | Ông Bố Âm Sai - Người Cầm Quyền Địa Phủ | Thế Vietsub | https://s.shopee.vn/40fangLxzz  (93,087 view)
+[05:23:51] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[05:24:42] [Mạn Kịch AI]   [256] 598 MB — đang upload ...
+[05:36:16] [Mạn Kịch AI]   [247] ✔ ĐÃ ĐĂNG (fb id: 1622316396232471) sau 2690s  | nợ 3 comment
+[05:36:16] [Mạn Kịch AI] [261/1025] Full ( Tập 1-9 ) | Hệ Thống Phản Diện Hạng Nặng | Thế Vietsub | https://s.shopee.vn/5LAyOsxuAx  (96,896 view)
+[05:36:16] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[05:36:57] [Mạn Kịch AI]   [261] 383 MB — đang upload ...
+[05:37:05]     ✔ comment 1/3 cho 28140815892271268 (id 28140815892271268_1358895662492420)
+[05:37:19]     ✔ comment 2/3 cho 28140815892271268 (id 28140815892271268_3333691463471143)
+[05:37:34]     ✔ comment 3/3 cho 28140815892271268 (id 28140815892271268_2254541725306780)
+[05:40:30] [Mạn Kịch AI]   [256] ✔ ĐÃ ĐĂNG (fb id: 1101521642534887) sau 949s  | nợ 3 comment
+[05:40:30] [Mạn Kịch AI] [264/1025] Full ( Tập 1-8 ) | Hệ Thống Bố Bỉm Sữa - Tôi Húp Bạn Thân Của Mẹ | Thế Vietsub | https://s.shopee.vn/AAGEHxycIi  (176,044 view)
+[05:40:30] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[05:41:21] [Mạn Kịch AI]   [264] 634 MB — đang upload ...
+[05:41:29]     ✔ comment 1/3 cho 2090538321816448 (id 2090538321816448_1046298168118158)
+[05:41:42]     ✔ comment 2/3 cho 2090538321816448 (id 2090538321816448_1060905436644465)
+[05:41:58]     ✔ comment 3/3 cho 2090538321816448 (id 2090538321816448_1573225047931164)
+[05:45:22]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 957,048,576 ...
+[05:46:51] [Mạn Kịch AI]   [261] ✔ ĐÃ ĐĂNG (fb id: 1068469395910185) sau 595s  | nợ 3 comment
+[05:46:51] [Mạn Kịch AI] [266/1025] Full ( Tập 1-9 ) | Hệ Thống Học Bá Khiêm Tốn - Đề Gì Cũng Giải Được | Thế Vietsub | https://s.shopee.vn/6L3Va80S2e  (425,520 view)
+[05:46:51] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[05:47:19] [Mạn Kịch AI]   [253] ✔ ĐÃ ĐĂNG (fb id: 1379416030811309) sau 1612s  | nợ 3 comment
+[05:55:36] [Mạn Kịch AI]   [266] 1878 MB — đang upload ...
+[05:55:45]     ✔ comment 1/3 cho 1584360433068044 (id 1584360433068044_1075826035367076)
+[05:56:03]     ✔ comment 2/3 cho 1584360433068044 (id 1584360433068044_1790068335776878)
+[05:56:24]     ✔ comment 3/3 cho 1584360433068044 (id 1584360433068044_1650895306828322)
+[05:56:41] [Mạn Kịch AI]   [264] ✔ ĐÃ ĐĂNG (fb id: 1107522931933841) sau 920s  | nợ 3 comment
+[05:57:32] [Mạn Kịch AI] [270/1025] Full ( Tập 1-37 ) | Hệ Thống Hiệu Trưởng Võ Đạo Mạnh Nhất | Thế Vietsub | https://s.shopee.vn/4fvHWvI4xc  (486,337 view)
+[05:57:32] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[05:58:06] [Mạn Kịch AI]   [270] 420 MB — đang upload ...
+[05:59:19] [Mạn Kịch AI] [277/1025] Full ( Tập 1-60 ) | Siêu Cấp Lính Đặc Chủng Tái Sinh Trả Thù Các Ông Trùm | Thế Vietsub | https://s.shopee.vn/6Ak5UmXlqu  (99,882 view)
+[05:59:19] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[06:05:22] [Mạn Kịch AI]   [277] 3375 MB — đang upload ...
+[06:05:30]     ✔ comment 1/3 cho 1101521642534887 (id 1101521642534887_1068219682228235)
+[06:05:45]     ✔ comment 2/3 cho 1101521642534887 (id 1101521642534887_2145190472698659)
+[06:05:58]     ✔ comment 3/3 cho 1101521642534887 (id 1101521642534887_1561555268801206)
+[06:06:05]     ✔ comment 1/3 cho 1068469395910185 (id 1068469395910185_2440332066452161)
+[06:06:20]     ✔ comment 2/3 cho 1068469395910185 (id 1068469395910185_1616961093104570)
+[06:06:35]     ✔ comment 3/3 cho 1068469395910185 (id 1068469395910185_3531745410313208)
+[06:09:17] [Mạn Kịch AI]   [270] ✔ ĐÃ ĐĂNG (fb id: 1693903741867591) sau 670s  | nợ 3 comment
+[06:09:17] [Mạn Kịch AI] [278/1025] Full ( Tập 1-6 ) | Siêu Cấp Lính Đánh Thuê Giải Cứu Em Gái Bị Bán Đến Campuchia | Thế Vietsub | https://s.shopee.vn/4qEhowSiD3  (168,034 view)
+[06:09:17] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[06:09:42] [Mạn Kịch AI]   [278] 301 MB — đang upload ...
+[06:17:26] [Mạn Kịch AI]   [278] ✔ ĐÃ ĐĂNG (fb id: 1287815979959353) sau 465s  | nợ 3 comment
+[06:17:27] [Mạn Kịch AI] [281/1025] Full Version | Tận Thế Giáng Lâm Tôi Có Siêu Năng Lực Cấp Thần | Thế Vietsub | https://s.shopee.vn/8Koa1cgDOY  (167,180 view)
+[06:17:27] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[06:22:00] [Mạn Kịch AI]   [281] 868 MB — đang upload ...
+[06:22:08]     ✔ comment 1/3 cho 1379416030811309 (id 1379416030811309_1097216339402126)
+[06:22:23]     ✔ comment 2/3 cho 1379416030811309 (id 1379416030811309_4451874595091118)
+[06:22:38]     ✔ comment 3/3 cho 1379416030811309 (id 1379416030811309_1747845956344214)
+[06:22:46]     ✔ comment 1/3 cho 1107522931933841 (id 1107522931933841_1543183823682810)
+[06:23:01]     ✔ comment 2/3 cho 1107522931933841 (id 1107522931933841_1374170294152230)
+[06:23:17]     ✔ comment 3/3 cho 1107522931933841 (id 1107522931933841_1371435071304614)
+[06:23:24]     ✔ comment 1/3 cho 1693903741867591 (id 1693903741867591_1368766441391825)
+[06:23:40]     ✔ comment 2/3 cho 1693903741867591 (id 1693903741867591_1333800412157601)
+[06:23:55]     ✔ comment 3/3 cho 1693903741867591 (id 1693903741867591_1588406559480728)
+[06:43:17] [Mạn Kịch AI]   [281] ✘ Lỗi: transfer: [ma loi 2] Service temporarily unavailable
+[06:43:17] [Mạn Kịch AI] [284/1025] Full ( Tập 1-4 ) | Siêu Cấp Thiếu Gia Ra Tù | Thế Vietsub | https://s.shopee.vn/50Y82SjLz5  (103,096 view)
+[06:43:17] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[06:43:20] [Mạn Kịch AI]   [266] ✘ Lỗi: transfer: [ma loi 2] Service temporarily unavailable
+[06:44:21] [Mạn Kịch AI]   [284] 489 MB — đang upload ...
+[06:44:29]     ✔ comment 1/3 cho 1622316396232471 (id 1622316396232471_1041772041922024)
+[06:44:43]     ✔ comment 2/3 cho 1622316396232471 (id 1622316396232471_1672610700503239)
+[06:45:00]     ✔ comment 3/3 cho 1622316396232471 (id 1622316396232471_1712773860024143)
+[06:45:07]     ✔ comment 1/3 cho 1287815979959353 (id 1287815979959353_1022597043934558)
+[06:45:24]     ✔ comment 2/3 cho 1287815979959353 (id 1287815979959353_1873228480310614)
+[06:45:38]     ✔ comment 3/3 cho 1287815979959353 (id 1287815979959353_27859393540350078)
+[06:46:49] [Mạn Kịch AI] [290/1025] Full Version | Chàng Rể Vô Song 1000 Tuổi | Thế Vietsub | https://s.shopee.vn/6fgLwFCZXR  (152,686 view)
+[06:46:49] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[06:48:20] [Mạn Kịch AI]   [290] 1091 MB — đang upload ...
+[06:56:49] [Mạn Kịch AI]   [284] ✔ ĐÃ ĐĂNG (fb id: 1966930184009214) sau 748s  | nợ 3 comment
+[06:56:49] [Mạn Kịch AI] [291/1025] Full ( Tập 1-30 ) | Tôi Là Top 1 Sinh Tồn Nơi Hoang Dã | Thế Vietsub | https://s.shopee.vn/8Koa0FJM2X  (97,247 view)
+[06:56:49] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[06:57:49] [Mạn Kịch AI]   [291] 719 MB — đang upload ...
+[07:15:58] [Mạn Kịch AI]   [291] ✔ ĐÃ ĐĂNG (fb id: 1088352693759319) sau 1089s  | nợ 3 comment
+[07:15:58] [Mạn Kịch AI] [295/1025] Full ( Tập 1-60 ) | Siêu Cấp Cường Giả Ra Tù Thống Nhất Thiên Hạ | Thế Vietsub | https://s.shopee.vn/20uWPUufVx  (154,712 view)
+[07:15:58] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[07:15:59] [Mạn Kịch AI]   [290] ✔ ĐÃ ĐĂNG (fb id: 1521321429679142) sau 1659s  | nợ 3 comment
+[07:20:31] [Mạn Kịch AI]   [295] 3334 MB — đang upload ...
+[07:20:40]     ✔ comment 1/3 cho 1966930184009214 (id 1966930184009214_2233767394024432)
+[07:20:55]     ✔ comment 2/3 cho 1966930184009214 (id 1966930184009214_915252497749655)
+[07:21:10]     ✔ comment 3/3 cho 1966930184009214 (id 1966930184009214_4327422857522872)
+[07:22:14] [Mạn Kịch AI] [297/1025] Full Version | Quy Tắc Tử Thần | Thế Vietsub | https://s.shopee.vn/9fJxgjvGrT  (80,131 view)
+[07:22:14] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[07:29:53] [Mạn Kịch AI]   [297] 4207 MB — đang upload ...
+[07:37:06] [Mạn Kịch AI]   [277] ✔ ĐÃ ĐĂNG (fb id: 27816920157958364) sau 5505s  | nợ 3 comment
+[07:37:06] [Mạn Kịch AI] [302/1025] Full Version | Tận Thế Giáng Lâm Tôi Là Ông Chủ Cửa Hàng Cấp Thần | Thế Vietsub | https://s.shopee.vn/1qb6DznPXF  (423,996 view)
+[07:37:06] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[07:37:56]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 296,048,576 ...
+[07:41:07] [Mạn Kịch AI]   [302] 2800 MB — đang upload ...
+[08:48:41] [Mạn Kịch AI]   [295] ✔ ĐÃ ĐĂNG (fb id: 1576294033880912) sau 5290s  | nợ 3 comment
+[08:48:41] [Mạn Kịch AI] [306/1025] Full ( Tập 1-110 ) | Chuyến Tàu Định Mệnh Tôi Vô Tình Húp Luôn Hoa Khôi | Thế Vietsub | https://s.shopee.vn/5fnoq0v9Ea  (95,314 view)
+[08:48:41] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[08:56:14] [Mạn Kịch AI]   [302] ✔ ĐÃ ĐĂNG (fb id: 2315992109205929) sau 4508s  | nợ 3 comment
+ERROR: Postprocessing: Conversion failed!
+[08:58:47] [Mạn Kịch AI]   ✘ Lỗi tải: ERROR: Postprocessing: Conversion failed!
+[08:58:56]     ✔ comment 1/3 cho 1088352693759319 (id 1088352693759319_2305005670259861)
+[08:59:09]     ✔ comment 2/3 cho 1088352693759319 (id 1088352693759319_1082119417832385)
+[08:59:22]     ✔ comment 3/3 cho 1088352693759319 (id 1088352693759319_1085313620589378)
+[08:59:29]     ✔ comment 1/3 cho 1521321429679142 (id 1521321429679142_1690035698962122)
+[08:59:45]     ✔ comment 2/3 cho 1521321429679142 (id 1521321429679142_1634391044936057)
+[08:59:59]     ✔ comment 3/3 cho 1521321429679142 (id 1521321429679142_1381075977486970)
+[09:00:07]     ✔ comment 1/3 cho 27816920157958364 (id 27816920157958364_2959550767711238)
+[09:00:23]     ✔ comment 2/3 cho 27816920157958364 (id 27816920157958364_28234040782952667)
+[09:00:38]     ✔ comment 3/3 cho 27816920157958364 (id 27816920157958364_1370857881239234)
+[09:01:49] [Mạn Kịch AI] [313/1025] Full ( Tập 1-100 ) | Hệ Thống Sửa Chữa Siêu Cấp, Gì Cũng Sửa Được | Thế Vietsub | https://s.shopee.vn/gP8tv4JSJ  (130,756 view)
+[09:01:49] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+ERROR: [download] Got error: 13194 bytes read, 10325360 more expected
+[09:02:51] [Mạn Kịch AI]   ✘ Lỗi tải: ERROR: [download] Got error: 13194 bytes read, 10325360 more expected
+[09:03:55] [Mạn Kịch AI] [315/1025] Full ( Tập 1-30 ) | Streamer Ẩm Thực Cấp Thần | Thế Vietsub | https://s.shopee.vn/5LAyWFBh0M  (336,623 view)
+[09:03:55] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[09:05:20] [Mạn Kịch AI]   [315] 1077 MB — đang upload ...
+[09:06:24] [Mạn Kịch AI] [317/1025] Full ( Tập 1-30 ) | Hệ Thống Chức Nghiệp Tuyệt Thế - Học Trò Tôi Toàn Quái Vật Võ Đạo | Thế Vietsub | https://s.shopee.vn/7VFT9Qtf0L  (72,342 view)
+[09:06:24] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[09:07:42] [Mạn Kịch AI]   [317] 941 MB — đang upload ...
+[09:25:59] [Mạn Kịch AI]   [297] ✔ ĐÃ ĐĂNG (fb id: 4129869313824721) sau 6966s  | nợ 3 comment
+[09:25:59] [Mạn Kịch AI] [324/1025] Full ( Tập 1-25 ) | Trở Về Từ Côn Lôn Giới - Tôi Có 5 Sư Tỷ Là Thần Chiến | Thế Vietsub | https://s.shopee.vn/2gAD9FPh1Q  (64,282 view)
+[09:25:59] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[09:28:03] [Mạn Kịch AI]   [324] 1165 MB — đang upload ...
+[quản lý] Chạy 'Kẻ trộm review' (quét lại) ← https://www.youtube.com/@PuPuVietsub003  (>= 10,000 view)
+[09:31:27] [Kẻ trộm review] Page: Kẻ trộm review (id 1162976383575019)
+[09:31:32] [Kẻ trộm review] Page có 222 video | sổ theo dõi 221 video
+[09:31:38] [Kẻ trộm review] Kênh có 525 video, lọc >= 10,000 view
+[09:31:38] [Kẻ trộm review] [55/525] Full Version|| Exposing the Mind Thief || PuPu Sub | https://s.shopee.vn/80BjalGen6  (18,280 view)
+[09:31:38] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[09:31:52] [Kẻ trộm review] [143/525] Full Version || Title of the Corpse || PuPu Sub | https://s.shopee.vn/5q7F9p4jY4  (25,692 view)
+[09:31:52] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[09:32:09] [Kẻ trộm review] [284/525] Full End || SIÊU NHÂN ÁO CAM || PuPu Sub | https://s.shopee.vn/8AV9vzteyq  (143,812 view)
+[09:32:09] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[09:32:18] [Mạn Kịch AI]   [317] ✔ ĐÃ ĐĂNG (fb id: 1403162028415032) sau 1476s  | nợ 3 comment
+[09:32:18] [Mạn Kịch AI] [325/1025] Full ( Tập 1-20 ) | Streamer Đạo Mộ Cấp Thần | Thế Vietsub | https://s.shopee.vn/3B6TkfTl9q  (160,186 view)
+[09:32:18] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[09:33:26] [Mạn Kịch AI]   [315] ✔ ĐÃ ĐĂNG (fb id: 1743297856913782) sau 1686s  | nợ 3 comment
+[09:33:57] [Mạn Kịch AI]   [325] 658 MB — đang upload ...
+[09:35:03] [Kẻ trộm review] [302/525] Full End || Thiên Tài Bại Liệt || PuPu Sub | https://s.shopee.vn/8fRQOMmCsC  (36,653 view)
+[09:35:03] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[09:35:03] [Mạn Kịch AI] [326/1025] Full ( Tập 1-30 ) | Tôi Là Ma Giới Chi Chủ Đời Thứ 10 | Thế Vietsub | https://s.shopee.vn/6VMvps1Z1W  (290,787 view)
+[09:35:03] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[09:36:35] [Mạn Kịch AI]   [326] 627 MB — đang upload ...
+[09:37:18] [Kẻ trộm review] Chờ các video đang upload hoàn tất ...
+[09:37:18] [Kẻ trộm review] XONG: 0 đã đăng | 525 bỏ qua | 0 lỗi
+[09:47:47]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 517,048,576 ...
+[09:51:26] [Mạn Kịch AI]   [325] ✔ ĐÃ ĐĂNG (fb id: 1378583924399999) sau 1049s  | nợ 3 comment
+[09:51:26] [Mạn Kịch AI] [328/1025] Full Version | Siêu Cấp Võ Giả Xuất Sơn | Thế Vietsub | https://s.shopee.vn/3qMAWeqPhT  (80,425 view)
+[09:51:26] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[09:52:30] [Mạn Kịch AI]   [328] 699 MB — đang upload ...
+[09:53:17] [Mạn Kịch AI]   [326] ✔ ĐÃ ĐĂNG (fb id: 1597921235191068) sau 1002s  | nợ 3 comment
+[09:53:39] [Mạn Kịch AI] [331/1025] Full Version | Long Thần Thức Tỉnh - Tôi Từ Ông Bố Nội Trợ Thành Thần | Thế Vietsub | https://s.shopee.vn/3g2kWCOWv5  (185,368 view)
+[09:53:39] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[09:54:56] [Mạn Kịch AI]   [331] 905 MB — đang upload ...
+[09:58:59] [Mạn Kịch AI]   [324] ✔ ĐÃ ĐĂNG (fb id: 2118741899048969) sau 1856s  | nợ 3 comment
+[09:58:59] [Mạn Kịch AI] [333/1025] Full ( Tập 1-133 ) | Hệ Thống Livestream Moi Tiền Donate | Thế Vietsub | https://s.shopee.vn/3qMAae520B  (231,902 view)
+[09:58:59] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[10:11:17] [Mạn Kịch AI]   [328] ✔ ĐÃ ĐĂNG (fb id: 1352634290390499) sau 1127s  | nợ 3 comment
+ERROR: Postprocessing: Conversion failed!
+[10:13:17] [Mạn Kịch AI]   ✘ Lỗi tải: ERROR: Postprocessing: Conversion failed!
+[10:13:28]     ✔ comment 1/3 cho 1403162028415032 (id 1403162028415032_2142981276571337)
+[10:13:42]     ✔ comment 2/3 cho 1403162028415032 (id 1403162028415032_1799452588158173)
+[10:13:57]     ✔ comment 3/3 cho 1403162028415032 (id 1403162028415032_1077506515221381)
+[10:14:05]     ✔ comment 1/3 cho 1743297856913782 (id 1743297856913782_1076897104869583)
+[10:14:18]     ✔ comment 2/3 cho 1743297856913782 (id 1743297856913782_1475076427796969)
+[10:14:30]     ✔ comment 3/3 cho 1743297856913782 (id 1743297856913782_2262209307882628)
+[10:15:49] [Mạn Kịch AI] [345/1025] Full ( Tập 1-50 ) | Tôi Là Siêu Ác Quỷ Ẩn Mình Trong Trò Chơi Nhập Vai | Thế Vietsub | https://s.shopee.vn/6pzm6rsyG2  (366,604 view)
+[10:15:49] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[10:18:35] [Mạn Kịch AI]   [345] 1886 MB — đang upload ...
+[10:18:42]     ✔ comment 1/3 cho 1576294033880912 (id 1576294033880912_2531646630684878)
+[10:18:53] [Mạn Kịch AI]   [331] ✔ ĐÃ ĐĂNG (fb id: 4280993342163765) sau 1438s  | nợ 3 comment
+[10:18:56]     ✔ comment 2/3 cho 1576294033880912 (id 1576294033880912_1538015084740955)
+[10:19:11]     ✔ comment 3/3 cho 1576294033880912 (id 1576294033880912_2001228527201535)
+[10:19:19]     ✔ comment 1/3 cho 1378583924399999 (id 1378583924399999_1458041562828888)
+[10:19:32]     ✔ comment 2/3 cho 1378583924399999 (id 1378583924399999_1078062994663507)
+[10:19:47]     ✔ comment 3/3 cho 1378583924399999 (id 1378583924399999_1101906512791557)
+[10:19:53]     ✔ comment 1/3 cho 1597921235191068 (id 1597921235191068_1736686460590055)
+[10:20:08]     ✔ comment 2/3 cho 1597921235191068 (id 1597921235191068_1881118956597753)
+[10:20:21]     ✔ comment 3/3 cho 1597921235191068 (id 1597921235191068_814078501795551)
+[10:21:24] [Mạn Kịch AI] [346/1025] Full ( Tập 1-100 ) | Thần Y Cấp Thần Xuất Sơn | Thế Vietsub | https://s.shopee.vn/9V0XTn026m  (120,314 view)
+[10:21:24] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[10:28:41] [Mạn Kịch AI]   [346] 3614 MB — đang upload ...
+[10:28:48]     ✔ comment 1/3 cho 2315992109205929 (id 2315992109205929_987646707663445)
+[10:29:02]     ✔ comment 2/3 cho 2315992109205929 (id 2315992109205929_1763906718132335)
+[10:29:14]     ✔ comment 3/3 cho 2315992109205929 (id 2315992109205929_1634325348113900)
+[10:29:23]     ✔ comment 1/3 cho 2118741899048969 (id 2118741899048969_1598126805238841)
+[10:29:37]     ✔ comment 2/3 cho 2118741899048969 (id 2118741899048969_2428743234288544)
+[10:29:52]     ✔ comment 3/3 cho 2118741899048969 (id 2118741899048969_1831694828203735)
+[10:30:58] [Mạn Kịch AI] [349/1025] Full ( Tập 1-50 ) | Thần Cấp Tội Phạm | Thế Vietsub | https://s.shopee.vn/3g2kY0TCF8  (263,927 view)
+[10:30:58] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[10:33:10] [Mạn Kịch AI]   [349] 1496 MB — đang upload ...
+[11:07:36] [Mạn Kịch AI]   [345] ✔ ĐÃ ĐĂNG (fb id: 1409597914511929) sau 2941s  | nợ 3 comment
+[11:07:36] [Mạn Kịch AI] [350/1025] Full ( Tập 1-70 ) | Hệ Thống Học Bá Khiêm Tốn - Đề Gì Cũng Giải Được | Thế Vietsub | https://s.shopee.vn/4LIRBUecVX  (167,408 view)
+[11:07:36] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[11:11:32] [Mạn Kịch AI]   [350] 2544 MB — đang upload ...
+[11:11:41]     ✔ comment 1/3 cho 1352634290390499 (id 1352634290390499_1803637471076344)
+[11:11:55]     ✔ comment 2/3 cho 1352634290390499 (id 1352634290390499_1743903499965568)
+[11:12:08]     ✔ comment 3/3 cho 1352634290390499 (id 1352634290390499_1395991555803299)
+[11:12:15]     ✔ comment 1/3 cho 4280993342163765 (id 4280993342163765_2063155061076440)
+[11:12:30]     ✔ comment 2/3 cho 4280993342163765 (id 4280993342163765_1817412069421988)
+[11:12:45]     ✔ comment 3/3 cho 4280993342163765 (id 4280993342163765_1077360548279827)
+[11:14:07] [Mạn Kịch AI]   [349] ✔ ĐÃ ĐĂNG (fb id: 1254898633364735) sau 2457s  | nợ 3 comment
+[11:14:07] [Mạn Kịch AI] [353/1025] Full Version | Tận Thế Dị Thú Xâm Chiếm Tôi Là Siêu Cấp Võ Giả Mạnh Nhất | Thế Vietsub | https://s.shopee.vn/AUt4b1NLdw  (100,534 view)
+[11:14:07] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[11:15:06] [Mạn Kịch AI]   [353] 634 MB — đang upload ...
+[11:32:35] [Mạn Kịch AI]   [353] ✔ ĐÃ ĐĂNG (fb id: 941970418925826) sau 1049s  | nợ 3 comment
+[11:32:35] [Mạn Kịch AI] [355/1025] Full Version | Nhan Sắc Vạn Người Mê | Thế Vietsub | https://s.shopee.vn/60QfJV3sUy  (228,761 view)
+[11:32:35] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[11:33:23] [Mạn Kịch AI]   [355] 569 MB — đang upload ...
+[11:49:02] [Mạn Kịch AI]   [355] ✔ ĐÃ ĐĂNG (fb id: 1358133315935890) sau 939s  | nợ 3 comment
+[11:49:02] [Mạn Kịch AI] [357/1025] Full Version | Người Bảo Vệ Thế Giới | Thế Vietsub | https://s.shopee.vn/LmIUQNC1R  (130,222 view)
+[11:49:02] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[11:52:14] [Mạn Kịch AI]   [357] 2158 MB — đang upload ...
+[12:03:36] [Mạn Kịch AI]   [346] ✔ ĐÃ ĐĂNG (fb id: 1980918005922290) sau 5695s  | nợ 3 comment
+[12:03:36] [Mạn Kịch AI] [359/1025] Full Version | Hệ Thống Thành Tựu Võ Đạo Tôi Là Siêu Cấp Thiên Tài | Thế Vietsub | https://s.shopee.vn/4VbrWyL3Ec  (173,884 view)
+[12:03:36] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+Giao diện ezaff đang chạy tại http://127.0.0.1:8799
+Đóng cửa sổ này (hoặc Ctrl+C) để tắt.
+DỪNG: đã có một tiến trình ezaff đang chạy (PID 27772).
+   Chạy hai cái cùng lúc sẽ đăng comment trùng và tải gấp đôi video, dễ làm cạn ổ đĩa.
+   Đóng cái kia trước, hoặc xoá E:\Project\ezaff\tools\.ezaff.lock nếu nó đã chết.
+[12:04:34]     mạng trục trặc (ConnectionError), thử lại sau 5s ...
+[12:04:35]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 1,978,048,576 ...[12:04:35]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 465,048,576 ...ERROR: [download] Got error: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+
+[12:04:35] [Mạn Kịch AI]   ✘ Lỗi tải: ERROR: [download] Got error: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[12:04:35]     mạng trục trặc (ConnectionError), thử lại sau 5s ...
+[12:04:39]     mạng trục trặc (ConnectionError), thử lại sau 10s ...
+[12:04:40]     mạng trục trặc (ConnectionError), thử lại sau 5s ...
+[12:04:45]     mạng trục trặc (ConnectionError), thử lại sau 5s ...
+[12:05:05]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 1,982,048,576 ...[12:05:05]     mạng trục trặc (ConnectionError), thử lại sau 5s ...[12:05:05]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 468,048,576 ...
+
+
+[12:05:11]     mạng trục trặc (ConnectionError), thử lại sau 10s ...
+[12:05:26]     ✔ comment 1/3 cho 941970418925826 (id 941970418925826_1075501874821782)
+== Kiểm tra token ==
+Token đủ quyền: đăng video + comment đều chạy được.
+Kho link chung: 132178 link
+Cache lượt xem: 2180 video đã biết
+Thư mục tạm: D:\ezaff-tmp (còn trống 11.8 GB)
+
+== Đang theo dõi tools/ezaff-jobs.json — Lưu là áp dụng ngay, không cần khởi động lại ==
+
+[quản lý] Chạy 'Kẻ trộm review' (mới) ← https://www.youtube.com/@PuPuVietsub003  (>= 10,000 view)
+[quản lý] Chạy 'Mạn Kịch AI' (mới) ← https://www.youtube.com/@thevietsub  (>= 50,000 view)
+[12:05:34] [Kẻ trộm review] Page: Kẻ trộm review (id 1162976383575019)
+[12:05:34] [Mạn Kịch AI] Page: Mạn Kịch AI (id 1256373850891074)
+[12:05:38] [Mạn Kịch AI] Page có 104 video | sổ theo dõi 102 video
+[12:05:38] [Mạn Kịch AI] Trả 6 video còn nợ comment từ lần trước ...
+[12:05:41] [Kẻ trộm review] Page có 222 video | sổ theo dõi 221 video
+[12:05:41]     ✔ comment 2/3 cho 941970418925826 (id 941970418925826_1035995002665003)
+[12:05:48] [Kẻ trộm review] Kênh có 525 video, lọc >= 10,000 view
+[12:05:48] [Kẻ trộm review] [55/525] Full Version|| Exposing the Mind Thief || PuPu Sub | https://s.shopee.vn/80BjalGen6  (18,280 view)
+[12:05:48] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[12:05:55]     ✔ comment 3/3 cho 941970418925826 (id 941970418925826_3522120344595684)
+[12:06:03]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 481,048,576 ...
+[12:06:07] [Kẻ trộm review] [143/525] Full Version || Title of the Corpse || PuPu Sub | https://s.shopee.vn/5q7F9p4jY4  (25,692 view)
+[12:06:07] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[12:06:29] [Kẻ trộm review] [284/525] Full End || SIÊU NHÂN ÁO CAM || PuPu Sub | https://s.shopee.vn/8AV9vzteyq  (143,812 view)
+[12:06:29] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[12:07:03] [Mạn Kịch AI] [362/1025] Full ( Tập 1-125 ) | Từ 1 Học Bá Tôi Trở Thành Ông Trùm Khét Tiếng | Thế Vietsub | https://s.shopee.vn/9ANh7ihTXQ  (239,274 view)
+[12:07:03] [Mạn Kịch AI]   - Đang tải từ YouTube ...
+[12:11:40] [Kẻ trộm review] [302/525] Full End || Thiên Tài Bại Liệt || PuPu Sub | https://s.shopee.vn/8fRQOMmCsC  (36,653 view)
+[12:11:40] [Kẻ trộm review]   - Đang tải từ YouTube ...
+[12:15:37] [Kẻ trộm review] Chờ các video đang upload hoàn tất ...
+[12:15:37] [Kẻ trộm review] XONG: 0 đã đăng | 525 bỏ qua | 0 lỗi
+== Kiểm tra token ==
+Giao diện ezaff đang chạy tại http://127.0.0.1:8799
+Đóng cửa sổ này (hoặc Ctrl+C) để tắt.
+Token đủ quyền: đăng video + comment đều chạy được.
+Kho link chung: 132178 link
+Cache lượt xem: 2180 video đã biết
+Thư mục tạm: D:\ezaff-tmp (còn trống 18.4 GB)
+
+== Đang theo dõi tools/ezaff-jobs.json — Lưu là áp dụng ngay, không cần khởi động lại ==
+
+[quản lý] Chạy 'Kẻ trộm review' (mới) ← https://www.youtube.com/@PuPuVietsub003  (>= 10,000 view)
+[quản lý] Chạy 'Mạn Kịch AI' (mới) ← https://www.youtube.com/@thevietsub  (>= 50,000 view)
+[18:19:06] [Mạn Kịch AI] Page: Mạn Kịch AI (id 1256373850891074)
+[18:19:06] [Kẻ trộm review] Page: Kẻ trộm review (id 1162976383575019)
+[18:19:09] [Mạn Kịch AI] Page có 109 video | sổ theo dõi 102 video
+[18:19:09] [Mạn Kịch AI] Trả 5 video còn nợ comment từ lần trước ...
+[quản lý] 'Kẻ trộm review' bị gỡ — cho dừng êm.
+[quản lý] 'Mạn Kịch AI' bị gỡ — cho dừng êm.
+[18:19:12] [Kẻ trộm review] Page có 222 video | sổ theo dõi 221 video
+[quản lý] 'Kẻ trộm review' bị gỡ — cho dừng êm.
+[quản lý] 'Mạn Kịch AI' bị gỡ — cho dừng êm.
+[18:19:16]     ✔ comment 1/3 cho 4129869313824721 (id 4129869313824721_1702753147684227)
+[18:19:17] [Kẻ trộm review] Kênh có 526 video, lọc >= 10,000 view
+[18:19:17] [Kẻ trộm review] Nhận lệnh dừng — chờ video đang upload xong rồi thoát.
+[18:19:17] [Kẻ trộm review] Chờ các video đang upload hoàn tất ...
+[18:19:17] [Kẻ trộm review] XONG: 0 đã đăng | 0 bỏ qua | 0 lỗi
+[quản lý] 'Mạn Kịch AI' bị gỡ — cho dừng êm.
+[quản lý] Chạy 'Xưởng Phim AI' (mới) ← https://www.youtube.com/@Achipdichdao  (>= 10,000 view)
+[18:19:21] [Xưởng Phim AI] Page: Xưởng Phim AI (id 1161775520362027)
+C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.4.0.post2)/charset_normalizer (3.4.3) doesn't match a supported version!
+  warnings.warn(
+== Kiểm tra token ==
+Token đủ quyền: đăng video + comment đều chạy được.
+Kho link chung: 132178 link
+Cache lượt xem: 2180 video đã biết
+Thư mục tạm: D:\ezaff-tmp (còn trống 20.0 GB)
+
+== Đang theo dõi tools/ezaff-jobs.json — Lưu là áp dụng ngay, không cần khởi động lại ==
+
+[quản lý] Chạy 'Xưởng Phim AI' (mới) ← https://www.youtube.com/@Achipdichdao  (>= 10,000 view)
+[18:19:30] [Xưởng Phim AI] Page: Xưởng Phim AI (id 1161775520362027)
+[18:19:32] [Xưởng Phim AI] Page có 61 video | sổ theo dõi 61 video
+[18:19:34] [Xưởng Phim AI] Kênh có 184 video, lọc >= 10,000 view
+[18:19:36] [Xưởng Phim AI] [1/184] Đại Minh Hà Tiên Nhân | Tập Full 1 - 10 | #gauhaihuoc #anime #reviewtruyentranh | https://s.shopee.vn/9pdNgW0FST  (77,605 view)
+[18:19:36] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[18:25:35] [Xưởng Phim AI]   [1] 1325 MB — đang upload ...
+[18:26:36] [Xưởng Phim AI] [2/184] Giấc Mộng Ngàn Năm Rực Rỡ | Tập Full 1 - 15 | #gauhaihuoc #anime #reviewtruyentranh | https://s.shopee.vn/4fvHXPbeVq  (54,444 view)
+[18:26:36] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[18:33:58] [Xưởng Phim AI]   [2] 1611 MB — đang upload ...
+[18:52:01]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 688,048,576 ...
+[19:00:09] [Xưởng Phim AI]   [1] ✔ ĐÃ ĐĂNG (fb id: 1304525971616153) sau 2075s  | nợ 3 comment
+[19:00:09] [Xưởng Phim AI] [3/184] Hoàng Tử Bại Não Đại Minh | Tập Full 1 - 10 | #gauhaihuoc #anime #reviewtruyentranh | https://s.shopee.vn/70JCRRbGJE  (47,034 view)
+[19:00:09] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[19:01:11] [Xưởng Phim AI]   [3] 1530 MB — đang upload ...
+[19:01:12]   ✘ 1304525971616153: Facebook báo lỗi xử lý video, bỏ comment.
+[19:13:50] [Xưởng Phim AI]   [2] ✔ ĐÃ ĐĂNG (fb id: 1022244883909067) sau 2391s  | nợ 3 comment
+[19:13:50] [Xưởng Phim AI] [4/184] Đại Minh Hà Tiên Nhân | Tập Full 1 - 57 (END SS1) | | https://s.shopee.vn/9ANh3RlTJP  (174,465 view)
+[19:13:50] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[19:20:17]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 808,048,576 ...
+ERROR: [download] Got error: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[19:20:17] [Xưởng Phim AI]   ✘ Lỗi tải: ERROR: [download] Got error: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[19:20:17]     mạng trục trặc (ConnectionError), thử lại sau 5s ...
+Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[19:20:17]     mạng trục trặc (ConnectionError), thử lại sau 5s ...
+== Kiểm tra token ==
+Giao diện ezaff đang chạy tại http://127.0.0.1:8799
+Đóng cửa sổ này (hoặc Ctrl+C) để tắt.
+Token đủ quyền: đăng video + comment đều chạy được.
+Kho link chung: 132178 link
+Cache lượt xem: 2180 video đã biết
+Thư mục tạm: D:\ezaff-tmp (còn trống 20.0 GB)
+
+== Đang theo dõi tools/ezaff-jobs.json — Lưu là áp dụng ngay, không cần khởi động lại ==
+
+[quản lý] Chạy 'Xưởng Phim AI' (mới) ← https://www.youtube.com/@Achipdichdao  (>= 10,000 view)
+[22:42:57] [Xưởng Phim AI] Page: Xưởng Phim AI (id 1161775520362027)
+[22:42:58] [Xưởng Phim AI] Page có 62 video | sổ theo dõi 63 video
+[22:42:58] [Xưởng Phim AI] Trả 1 video còn nợ comment từ lần trước ...
+[22:43:06]     ✔ comment 1/3 cho 1022244883909067 (id 1022244883909067_1070488952538227)
+[22:43:22]     ✔ comment 2/3 cho 1022244883909067 (id 1022244883909067_1083015264663196)
+[22:43:38]     ✔ comment 3/3 cho 1022244883909067 (id 1022244883909067_2294877781321123)
+[22:43:41] [Xưởng Phim AI] Kênh có 184 video, lọc >= 10,000 view
+[22:43:43] [Xưởng Phim AI] [3/184] Hoàng Tử Bại Não Đại Minh | Tập Full 1 - 10 | #gauhaihuoc #anime #reviewtruyentranh | https://s.shopee.vn/70JCRRbGJE  (47,034 view)
+[22:43:43] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[22:44:30] [Xưởng Phim AI]   [3] 1530 MB — đang upload ...
+[22:45:31] [Xưởng Phim AI] [4/184] Đại Minh Hà Tiên Nhân | Tập Full 1 - 57 (END SS1) | | https://s.shopee.vn/9ANh3RlTJP  (174,466 view)
+[22:45:31] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[22:56:32]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 492,048,576 ...ERROR: [download] Got error: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+[22:56:32] [Xưởng Phim AI]   ✘ Lỗi tải: ERROR: [download] Got error: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[22:57:34] [Xưởng Phim AI] [5/184] Hà nhân xuyên không làm chú nhỏ của Chu Nguyên Chương | 1 - 100 | #anime #reviewtruyentranh | https://s.shopee.vn/7AccVi0cYS  (70,653 view)
+[22:57:34] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51755)
+[canh giữ] Tiến trình đã chết, bật lại ...
+Traceback (most recent call last):
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 424, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "E:\Project\ezaff\tools\ezaff-ui.py", line 392, in do_GET
+    return self._tra(200, "application/json",
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+                     json.dumps(trang_thai(), ensure_ascii=False).encode("utf-8"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project\ezaff\tools\ezaff-ui.py", line 369, in _tra
+    self.wfile.write(noi_dung)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Tailolicon\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[23:22:51] [Xưởng Phim AI]   [3] ✔ ĐÃ ĐĂNG (fb id: 1219767414558794) sau 2301s  | nợ 3 comment
+ERROR: Postprocessing: Conversion failed!
+[23:28:51] [Xưởng Phim AI]   ✘ Lỗi tải: ERROR: Postprocessing: Conversion failed!
+[23:29:53] [Xưởng Phim AI] [6/184] Phiên Vương Mạnh Nhất Đại Minh | Tập Full 1 - 14 | #gauhaihuoc #anime #reviewtruyentranh | https://s.shopee.vn/2BDwgi2bgz  (168,536 view)
+[23:29:53] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[23:30:47] [Xưởng Phim AI]   [6] 1493 MB — đang upload ...
+[23:31:49] [Xưởng Phim AI] [7/184] Tam Quốc Đệ Nhất Mưu Sĩ Hà Nhân | Full Version | | https://s.shopee.vn/111zD9gCTB  (55,119 view)
+[23:31:49] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[23:34:50] [Xưởng Phim AI]   [7] 3943 MB — đang upload ...
+[23:49:45]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 743,048,576 ...[23:49:45]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 573,048,576 ...
+
+[23:55:21]     Mạng đứt giữa chừng (ConnectTimeout) — chờ mạng về rồi gửi lại từ byte 950,048,576 ...
+[00:09:20] [Xưởng Phim AI]   [6] ✔ ĐÃ ĐĂNG (fb id: 1460508912533903) sau 2312s  | nợ 3 comment
+[00:09:20] [Xưởng Phim AI] [8/184] Hà nhân xuyên không làm chú nhỏ của Chu Nguyên Chương | Phần 1 | Full Version | | https://s.shopee.vn/8Koa7H5ohH  (340,020 view)
+[00:09:20] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+
+
+ERROR: unable to write data: [Errno 28] No space left on device
+[00:29:00] [Xưởng Phim AI]   ✘ Lỗi tải: ERROR: unable to write data: [Errno 28] No space left on device
+[00:29:09]     ✔ comment 1/3 cho 1219767414558794 (id 1219767414558794_825294140593828)
+[00:29:26]     ✔ comment 2/3 cho 1219767414558794 (id 1219767414558794_4159074177723356)
+[00:29:43]     ✔ comment 3/3 cho 1219767414558794 (id 1219767414558794_1042173548391270)
+[00:30:52] [Xưởng Phim AI] [9/184] Đại Minh Chu Nhị Gia | Full Tập 1 - 50 | Báo Con Hà Nhân Báo Chu Nguyên Chương | https://s.shopee.vn/4Az19FspAV  (105,998 view)
+[00:30:52] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[00:39:39] [Xưởng Phim AI]   [9] 5517 MB — đang upload ...
+[00:39:49]     ✔ comment 1/3 cho 1460508912533903 (id 1460508912533903_1063697039693383)
+[00:40:07]     ✔ comment 2/3 cho 1460508912533903 (id 1460508912533903_1062919573164762)
+[00:40:23]     ✔ comment 3/3 cho 1460508912533903 (id 1460508912533903_1729270628353933)
+[01:20:12] [Xưởng Phim AI]   [7] ✔ ĐÃ ĐĂNG (fb id: 1535047331092274) sau 6321s  | nợ 3 comment
+[01:20:12] [Xưởng Phim AI] [10/184] Hà nhân xuyên không thành Chu Ngũ Tứ là cha ruột của Chu Nguyên Chương  | Tập 1 - 10 | | https://s.shopee.vn/904Gpf5feZ  (47,249 view)
+[01:20:12] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[01:23:08] [Xưởng Phim AI]   [10] 957 MB — đang upload ...
+[01:48:26] [Xưởng Phim AI]   [10] ✔ ĐÃ ĐĂNG (fb id: 1216378847323407) sau 1518s  | nợ 3 comment
+[01:48:26] [Xưởng Phim AI] [11/184] Hà nhân xuyên không thành Chu Ngũ Tứ là cha ruột của Chu Nguyên Chương  | Full Version | | https://s.shopee.vn/3qMAYokkaG  (158,311 view)
+[01:48:26] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[01:56:26] [Xưởng Phim AI]   [11] 5149 MB — đang upload ...
+[03:04:15] [Xưởng Phim AI]   [9] ✔ ĐÃ ĐĂNG (fb id: 1371077718323418) sau 8676s  | nợ 3 comment
+[03:04:15] [Xưởng Phim AI] [12/184] Tửu Quán A Tam Của Ta Thông Đến Cổ Đại | Full 01 - 84 | A Chíp Dịch Dạo | https://s.shopee.vn/1qb6IueWz7  (87,228 view)
+[03:04:15] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+ERROR: Postprocessing: Conversion failed!
+[03:16:40] [Xưởng Phim AI]   ✘ Lỗi tải: ERROR: Postprocessing: Conversion failed!
+[03:16:50]     ✔ comment 1/3 cho 1535047331092274 (id 1535047331092274_1537161494271709)
+[03:17:04]     ✔ comment 2/3 cho 1535047331092274 (id 1535047331092274_1088032060845362)
+[03:17:19]     ✔ comment 3/3 cho 1535047331092274 (id 1535047331092274_1953527042029282)
+[03:17:27]     ✔ comment 1/3 cho 1216378847323407 (id 1216378847323407_1401892651900944)
+[03:17:41]     ✔ comment 2/3 cho 1216378847323407 (id 1216378847323407_1051528944433221)
+[03:17:54]     ✔ comment 3/3 cho 1216378847323407 (id 1216378847323407_1076087915357220)
+[03:18:56] [Xưởng Phim AI] [13/184] Hà Nhân Xuyên Không Cùng Chu Nguyên Chương Tạo Phản Tranh Giang Sơn | Tập Full | A Chíp Dịch Dạo | https://s.shopee.vn/AAGEB2Valk  (110,999 view)
+[03:18:56] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[03:22:45] [Xưởng Phim AI]   [13] 2667 MB — đang upload ...
+[04:11:29] [Xưởng Phim AI]   [11] ✔ ĐÃ ĐĂNG (fb id: 2204810663687006) sau 8103s  | nợ 3 comment
+[04:11:29] [Xưởng Phim AI] [14/184] Đại Đường Hà Quốc Công | 18 TIẾNG 21 PHÚT | Tập Full 1-160 | A Chíp Dịch Dạo | https://s.shopee.vn/4LIRGTLjms  (52,627 view)
+[04:11:29] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[04:29:24]     Facebook chê khối 1 MB — giảm còn 34 MB rồi gửi lại ...
+[04:32:46] [Xưởng Phim AI]   [13] ✔ ĐÃ ĐĂNG (fb id: 2419004205293109) sau 4201s  | nợ 3 comment
+ERROR: Postprocessing: Conversion failed!
+[04:52:40] [Xưởng Phim AI]   ✘ Lỗi tải: ERROR: Postprocessing: Conversion failed!
+[04:52:49]     ✔ comment 1/3 cho 1371077718323418 (id 1371077718323418_1797337511452650)
+[04:53:03]     ✔ comment 2/3 cho 1371077718323418 (id 1371077718323418_1581364250280067)
+[04:53:17]     ✔ comment 3/3 cho 1371077718323418 (id 1371077718323418_2123784464891472)
+[04:54:20] [Xưởng Phim AI] [15/184] Hoàng Đế Xuyên Không Cùng Hà Nhân Đi Du Lịch Xuyên Các Triều Đại  | Full Version | A Chíp Dịch Dạo | https://s.shopee.vn/7Kw2lNhYc8  (76,621 view)
+[04:54:20] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[04:59:46] [Xưởng Phim AI]   [15] 4271 MB — đang upload ...
+[05:00:48] [Xưởng Phim AI] [16/184] Hà Tiên Nhân  | Full Version | A Chíp Dịch Dạo | https://s.shopee.vn/111zAdyFvR  (79,921 view)
+[05:00:48] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+ERROR: [download] Got error: 6444263 bytes read, 3782278 more expected
+[05:35:45] [Xưởng Phim AI]   ✘ Lỗi tải: ERROR: [download] Got error: 6444263 bytes read, 3782278 more expected
+[05:36:49] [Xưởng Phim AI] [17/184] Xuyên Thành Tôn Ngộ Không Ta Quậy Kịch Bản Tây Du Ký | Tập 1 - 61 | A Chip Dịch Dạo | https://s.shopee.vn/111z8vEnyu  (26,253 view)
+[05:36:49] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[05:42:50] [Xưởng Phim AI]   [17] 4379 MB — đang upload ...
+[06:49:47] [Xưởng Phim AI]   [15] ✔ ĐÃ ĐĂNG (fb id: 2128976301016194) sau 6601s  | nợ 3 comment
+[06:49:47] [Xưởng Phim AI] [18/184] Đại Minh Bộ 5 Báo Thủ | Full Version | A Chíp Dịch Dạo | https://s.shopee.vn/1qb6IoG8zn  (165,773 view)
+[06:49:47] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[06:58:19] [Xưởng Phim AI]   [18] 2127 MB — đang upload ...
+[06:58:27]     ✔ comment 1/3 cho 2204810663687006 (id 2204810663687006_1077499898132146)
+[06:58:42]     ✔ comment 2/3 cho 2204810663687006 (id 2204810663687006_1783132893134779)
+[06:58:57]     ✔ comment 3/3 cho 2204810663687006 (id 2204810663687006_1426500466206123)
+[06:59:05]     ✔ comment 1/3 cho 2419004205293109 (id 2419004205293109_2957956577930002)
+[06:59:20]     ✔ comment 2/3 cho 2419004205293109 (id 2419004205293109_2113692629360824)
+[06:59:33]     ✔ comment 3/3 cho 2419004205293109 (id 2419004205293109_1406037011667978)
+[07:34:42] [Xưởng Phim AI]   [17] ✔ ĐÃ ĐĂNG (fb id: 1710772303480940) sau 6712s  | nợ 3 comment
+[07:34:42] [Xưởng Phim AI] [19/184] Hà nhân xuyên không làm chú nhỏ của Chu Nguyên Chương | Phần 2 | Full Version | A Chíp Dịch Dạo | https://s.shopee.vn/4Az15BIvDK  (55,245 view)
+[07:34:42] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+ERROR: Postprocessing: Conversion failed!
+[07:49:47] [Xưởng Phim AI]   ✘ Lỗi tải: ERROR: Postprocessing: Conversion failed!
+[07:50:50] [Xưởng Phim AI]   [18] ✔ ĐÃ ĐĂNG (fb id: 1574552714195822) sau 3151s  | nợ 3 comment
+[07:50:51] [Xưởng Phim AI] [20/184] Hà Nhân Xuyên Không Đến Đại Tùy Trở Thành Đại Tướng Thiên Hạ Vô Song Duy Ngã Độc Tôn | Full Version | https://s.shopee.vn/3g2kXIYBS9  (142,459 view)
+[07:50:51] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[08:02:55] [Xưởng Phim AI]   [20] 6085 MB — đang upload ...
+[08:03:58] [Xưởng Phim AI] [21/184] Hà Nhân Tửu Quán | Quán Rựu Lưu Dấu Các Triều Đại | Tập Full 1 - 61 | https://s.shopee.vn/3B6TlJL1gu  (131,002 view)
+[08:03:58] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[08:09:59] [Xưởng Phim AI]   [21] 3898 MB — đang upload ...
+[09:35:21]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 3,680,048,576 ...
+[09:35:21]     Mạng đứt giữa chừng (ConnectionError) — chờ mạng về rồi gửi lại từ byte 3,421,048,576 ...
+[09:48:59] [Xưởng Phim AI]   [21] ✔ ĐÃ ĐĂNG (fb id: 2072025996762763) sau 5940s  | nợ 3 comment
+[09:48:59] [Xưởng Phim AI] [22/184] Xuyên Không Trở Thành Con Trai Trình Giảo Kim Ta Đi Báo Ông Già | Full Version | https://s.shopee.vn/4Az0ztx9yF  (59,068 view)
+[09:48:59] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[09:57:19] [Xưởng Phim AI]   [22] 4530 MB — đang upload ...
+[09:57:28]     ✔ comment 1/3 cho 2128976301016194 (id 2128976301016194_1064570626151484)
+[09:57:42]     ✔ comment 2/3 cho 2128976301016194 (id 2128976301016194_1056119830614889)
+[09:57:57]     ✔ comment 3/3 cho 2128976301016194 (id 2128976301016194_1418535110171791)
+[09:58:04]     ✔ comment 1/3 cho 1710772303480940 (id 1710772303480940_1212105741101980)
+[09:58:19]     ✔ comment 2/3 cho 1710772303480940 (id 1710772303480940_1777293146606125)
+[09:58:33]     ✔ comment 3/3 cho 1710772303480940 (id 1710772303480940_2097829117755117)
+[09:58:40]     ✔ comment 1/3 cho 1574552714195822 (id 1574552714195822_3038658652971293)
+[09:58:55]     ✔ comment 2/3 cho 1574552714195822 (id 1574552714195822_1568193321460537)
+[09:59:10]     ✔ comment 3/3 cho 1574552714195822 (id 1574552714195822_2243095843146812)
+[10:37:15] [Xưởng Phim AI]   [20] ✔ ĐÃ ĐĂNG (fb id: 1410507951176555) sau 9260s  | nợ 3 comment
+[10:37:15] [Xưởng Phim AI] [23/184] Bắc Cảnh Vương Hà Nhân | Full Version | A Chip Dịch Dạo | https://s.shopee.vn/AAGE950nFX  (149,822 view)
+[10:37:15] [Xưởng Phim AI]   - Đang tải từ YouTube ...
+[10:55:17] [Xưởng Phim AI]   [23] 6209 MB — đang upload ...
+[12:00:54] [Xưởng Phim AI]   [22] ✔ ĐÃ ĐĂNG (fb id: 1593889005671756) sau 7414s  | nợ 3 comment
+[12:00:54] [Xưởng Phim AI] [24/184] Xuyên Không Ta Làm Bạn Tù Của Chu Đệ | Tập Full 1 - 50 | A Chip Dịch Dạo | https://s.shopee.vn/1qb6D7ZxRm  (54,067 view)
+[12:00:54] [Xưởng Phim AI]   - Đang tải từ YouTube ...

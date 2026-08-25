@@ -1,0 +1,47 @@
+{
+  "name": "ezaff",
+  "version": "1.0.1",
+  "description": "Trình quản lý link Affiliate cho thị trường Việt Nam",
+  "author": "ezaff",
+  "main": "./out/main/index.js",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "dev:paid": "node ./scripts/run-dev-paid.mjs",
+    "build": "electron-vite build",
+    "build:release": "electron-vite build",
+    "obfuscate": "node ./scripts/obfuscate-main.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "npm rebuild better-sqlite3 && vitest run && npx @electron/rebuild -f -w better-sqlite3",
+    "rebuild:native": "npx @electron/rebuild -f -w better-sqlite3",
+    "verify:scrape": "node ./scripts/run-verify-scrape.mjs",
+    "login:scrape": "node ./scripts/run-login-then-scrape.mjs",
+    "dist": "npm run build:release && npm run rebuild:native && electron-builder --win nsis --x64",
+    "dist:dir": "npm run build:release && npm run rebuild:native && electron-builder --win dir --x64",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "^5.3.0",
+    "better-sqlite3": "^11.8.1",
+    "electron-updater": "^6.8.9",
+    "exceljs": "^4.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^34.0.2",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^2.3.0",
+    "javascript-obfuscator": "^4.1.1",
+    "terser": "^5.36.0",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.14",
+    "vitest": "^3.0.4"
+  }
+}

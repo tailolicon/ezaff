@@ -1,0 +1,112 @@
+# ezaff — Windows packaging (electron-builder)
+# better-sqlite3 is a native addon: must be rebuilt for Electron ABI and
+# unpacked from asar so the packaged app can open SQLite.
+
+appId: com.ezaff.app
+productName: ezaff
+copyright: Copyright © ezaff
+
+directories:
+  buildResources: build
+  output: dist
+
+# Only the three directories electron-vite actually emits. This was `out/**/*`
+# once, which swept every scratch probe script, page dump and run log that had
+# piled up in out/ into the shipped asar — 77 stray files in 1.0.0, enough for
+# a reader to reconstruct the whole scraping method.
+files:
+  - out/main/**/*
+  - out/preload/**/*
+  - out/renderer/**/*
+  - package.json
+  - node_modules/**/*
+  - '!**/{.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.DS_Store}/**/*'
+  - '!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}'
+  - '!**/node_modules/*/{test,tests,__tests__,docs,doc,example,examples}/**/*'
+  - '!**/node_modules/.bin/**/*'
+  - '!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}'
+  - '!.editorconfig'
+  - '!**/._*'
+  - '!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}'
+  - '!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}'
+  - '!**/{appveyor.yml,.travis.yml,circle.yml}'
+  - '!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}'
+
+# The 132k owner-link seed ships beside the app, not inside asar, so first run
+# imports it straight from disk. Refresh with scripts/refresh-seed.mjs after a
+# harvest, then rebuild.
+extraResources:
+  - from: resources/res.dat
+    to: res.dat
+
+# Native .node binaries cannot load from inside asar
+asar: true
+# Raise bar against casual asar unpack + patch of main process fee logic
+asarUnpack:
+  - '**/*.{node,dll}'
+  - node_modules/better-sqlite3/**/*
+
+# Electron fuses (Electron 20+): disable node CLI and enable asar integrity where supported
+electronFuses:
+  runAsNode: false
+  enableCookieEncryption: true
+  enableNodeOptionsEnvironmentVariable: false
+  enableNodeCliInspectArguments: false
+  enableEmbeddedAsarIntegrityValidation: true
+  onlyLoadAppFromAsar: true
+
+# Rebuild native deps for the Electron ABI used at package time
+npmRebuild: true
+nodeGypRebuild: false
+buildDependenciesFromSource: false
+
+extraMetadata:
+  main: out/main/index.js
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+  artifactName: '${productName}-${version}-setup.${ext}'
+
+nsis:
+  # One-click, per-user install: double-click and it installs to the user's
+  # own AppData and launches — no wizard, no "install for everyone" scope
+  # page, no UAC prompt. The audience is non-technical, and the folder-choice
+  # page it drops was never something they'd use.
+  oneClick: true
+  allowToChangeInstallationDirectory: false
+  perMachine: false
+  allowElevation: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: ezaff
+  # Vietnamese (vi-VN) — LCID 1066. Falls back to English if the NSIS
+  # language pack is unavailable in this electron-builder version.
+  language: '1066'
+  installerLanguages:
+    - vi_VN
+    - en_US
+  displayLanguageSelector: false
+  installerSidebar: null
+  uninstallerSidebar: null
+  deleteAppDataOnUninstall: false
+  warningsAsErrors: false
+
+# ── Tự động cập nhật ────────────────────────────────────────────────────────
+# electron-builder đẩy latest.yml + .exe + .exe.blockmap lên GitHub Releases;
+# electron-updater trong app đọc latest.yml để so phiên bản.
+#
+# blockmap là thứ khiến mỗi bản cập nhật chỉ tải phần thay đổi. Quan trọng ở
+# đây vì mỗi lần phát hành file seed 2 MB lại khác — thiếu nó thì user tải lại
+# nguyên installer chỉ vì vài dòng link mới.
+#
+# Repo chỉ chứa file .exe phát hành — mã nguồn không đẩy lên đó.
+# owner/repo này được nướng vào app-update.yml bên trong bản cài, nên sai là
+# mọi máy đã cài sẽ 404 vĩnh viễn và không có đường đẩy bản vá xuống.
+publish:
+  - provider: github
+    owner: tailolicon
+    repo: ezaff-releases

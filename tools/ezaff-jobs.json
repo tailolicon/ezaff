@@ -1,0 +1,26 @@
+[
+  {
+    "ten": "Kẻ trộm review",
+    "page_id": "1162976383575019",
+    "kenh": "https://www.youtube.com/@PuPuVietsub003",
+    "view_toi_thieu": 10000,
+    "song_song": 2,
+    "bat": false
+  },
+  {
+    "ten": "Mạn Kịch AI",
+    "page_id": "1256373850891074",
+    "kenh": "https://www.youtube.com/@thevietsub",
+    "view_toi_thieu": 50000,
+    "song_song": 3,
+    "bat": false
+  },
+  {
+    "ten": "Xưởng Phim AI",
+    "page_id": "1161775520362027",
+    "kenh": "https://www.youtube.com/@Achipdichdao",
+    "view_toi_thieu": 10000,
+    "song_song": 2,
+    "bat": true
+  }
+]
